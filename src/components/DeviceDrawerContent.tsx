@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const DeviceDrawerContent = () => {
   return (
@@ -11,8 +13,7 @@ const DeviceDrawerContent = () => {
         We&apos;ll email you a link to open later on your Mac
       </p>
       <div className="flex overflow-hidden gap-2 p-2 pl-0 w-full text-base bg-white rounded-full border-2 md:text-lg mt-8">
-        <input
-          className="px-4 py-1 w-full rounded-xl lg:px-6 lg:py-2 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none"
+        <Input
           placeholder="Your work email"
           required
           id="email"
@@ -20,13 +21,14 @@ const DeviceDrawerContent = () => {
           name="email"
           aria-label="Your work email"
         />
-        <button
-          className="flex-none px-6 py-1 font-medium rounded-full lg:pl-6 lg:pr-5 lg:py-2 bg-[#93f27e] text-black focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none"
+        <Button
+          variant="green"
+          className="flex-none"
           type="submit"
           aria-label="Send link"
         >
           Send link
-        </button>
+        </Button>
       </div>
 
       <div className="flex gap-4 mt-6 font-medium underline text-black decoration-colored-tertiary">

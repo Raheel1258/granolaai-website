@@ -5,6 +5,7 @@ import {
   navbarLinks,
   otherFooterLinks,
 } from "@/constants/nav-links";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
@@ -63,15 +64,12 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <DeviceDrawer
             trigger={
-              <button
-                className={`rounded-full px-[12px] py-[6px] w-[112.08px] font-medium cursor-pointer transition-colors duration-200 ${
-                  isScrolled 
-                    ? "bg-[#93f27e]" 
-                    : "bg-white hover:bg-black/5 border-[0.9px] border-neutral-200 "
-                }`}
+              <Button
+                variant={isScrolled ? "green" : "default"}
+                className="w-[112.08px]"
               >
                 Get the app
-              </button>
+              </Button>
             }
             content={<DeviceDrawerContent />}
           />
