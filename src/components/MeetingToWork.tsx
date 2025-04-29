@@ -65,7 +65,7 @@ const MeetingToWork: React.FC = () => {
       </div>
       <div className="flex flex-col col-span-full gap-4 items-center py-12 mx-auto text-colored">
         <blockquote className="max-w-3xl text-2xl italic text-center md:text-3xl text-balance">
-          The addiction is real - at this point I can't imagine life without it.
+          The addiction is real - at this point I can&apos;t imagine life without it.
           Effortlessly powerful
         </blockquote>
         <div className="flex gap-4 items-center -ml-2">
