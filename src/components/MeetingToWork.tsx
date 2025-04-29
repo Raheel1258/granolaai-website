@@ -4,15 +4,6 @@ import React from "react";
 const MeetingToWork: React.FC = () => {
   return (
     <section className="relative flex flex-col items-center px-4 py-16 w-full max-w-3xl sm:px-6 md:py-24 lg:py-20 lg:px-8 lg:max-w-6xl overflow-visible gap-4 lg:gap-8">
-      <div
-        className="absolute inset-0 select-none z-[-1] opacity-80 translate-y-1/5"
-        style={{
-          background: `radial-gradient(at 71% 57%, rgba(51, 255, 0, 0.3) 0px, transparent 50%), 
-                radial-gradient(at 53% 43%, rgba(255, 255, 0, 0.3) 0px, transparent 50%), 
-                radial-gradient(at 31% 51%, rgba(255, 128, 0, 0.17) 0px, transparent 50%)`,
-        }}
-      ></div>
-
       <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8">
         <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
           Put your meetings to work
@@ -74,7 +65,7 @@ const MeetingToWork: React.FC = () => {
       </div>
       <div className="flex flex-col col-span-full gap-4 items-center py-12 mx-auto text-colored">
         <blockquote className="max-w-3xl text-2xl italic text-center md:text-3xl text-balance">
-          The addiction is real - at this point I can’t imagine life without it.
+          The addiction is real - at this point I can't imagine life without it.
           Effortlessly powerful
         </blockquote>
         <div className="flex gap-4 items-center -ml-2">

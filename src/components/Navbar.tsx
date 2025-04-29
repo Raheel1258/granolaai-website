@@ -64,8 +64,10 @@ const Navbar = () => {
           <DeviceDrawer
             trigger={
               <button
-                className={`rounded-full px-[12px] py-[6px] w-[112.08px] font-medium cursor-pointer ${
-                  isScrolled ? "bg-[#93f27e]" : "hover:bg-black/5 border"
+                className={`rounded-full px-[12px] py-[6px] w-[112.08px] font-medium cursor-pointer transition-colors duration-200 ${
+                  isScrolled 
+                    ? "bg-[#93f27e]" 
+                    : "bg-white hover:bg-black/5 border-[0.9px] border-neutral-200 "
                 }`}
               >
                 Get the app
