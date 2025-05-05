@@ -1,5 +1,6 @@
 import { logoSetOne, logoSetTwo } from "@/constants/logo-sets";
 import Image from "next/image";
+import StripeClimateInfo from "./climateInfo";
 
 const TrustedBySection = () => {
   return (
@@ -49,6 +50,8 @@ const TrustedBySection = () => {
         <div className="pointer-events-none absolute left-0 top-0 w-1/6 h-full z-10 bg-gradient-to-r from-white to-transparent" />
         <div className="pointer-events-none absolute right-0 top-0 w-1/6 h-full z-10 bg-gradient-to-l from-white to-transparent" />
       </div>
+
+      <StripeClimateInfo />
     </section>
   );
 };
