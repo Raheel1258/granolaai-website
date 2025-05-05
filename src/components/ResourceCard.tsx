@@ -1,3 +1,5 @@
+import { ResourceItem } from "@/app/pricing/types";
+
 export const ResourceCard = ({ resource }: { resource: ResourceItem }) => {
   return (
     <a

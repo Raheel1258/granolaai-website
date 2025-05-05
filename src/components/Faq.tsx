@@ -1,3 +1,4 @@
+import { FAQItem, ResourceItem } from "@/app/pricing/types";
 import { FAQSection } from "./FaqSection";
 import { ResourcesSection } from "./ResourceSection";
 import { Testimonial } from "./Testimonal";

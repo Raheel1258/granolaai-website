@@ -1,10 +1,10 @@
-type FAQItem = {
+export type FAQItem = {
   id: string;
   question: string;
   answer: string;
 };
 
-type ResourceItem = {
+export type ResourceItem = {
   icon: React.ReactNode;
   title: string;
   description: string;

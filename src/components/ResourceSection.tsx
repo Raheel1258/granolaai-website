@@ -1,3 +1,4 @@
+import { ResourceItem } from "@/app/pricing/types";
 import { ResourceCard } from "./ResourceCard";
 
 export const ResourcesSection = ({

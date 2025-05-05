@@ -1,3 +1,5 @@
+import { FAQItem } from "@/app/pricing/types";
+
 export const FAQAccordionItem = ({
   faq,
   isOpen,

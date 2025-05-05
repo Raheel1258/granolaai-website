@@ -1,11 +1,15 @@
+import Image from "next/image";
+
 export const Testimonial = () => {
   return (
     <div className="my-0 p-6 border rounded-xl bg-gray-900 text-white shadow-md max-w-xl mx-auto">
       <div className="flex items-center gap-3 pb-3 mb-3">
         <div className="w-12 h-12 rounded-full overflow-hidden">
-          <img
+          <Image
             src="/api/placeholder/48/48"
             alt="Des Traynor"
+            width={48}
+            height={48}
             className="w-full h-full object-cover"
           />
         </div>
@@ -29,12 +33,13 @@ export const Testimonial = () => {
         </div>
       </div>
       <p className="mb-3">
-        I don't think I've ever gotten more thanks from people recommending an
-        app than I have for <span className="text-blue-300">@meetgranola</span>.
+        I don&apos;t think I&apos;ve ever gotten more thanks from people
+        recommending an app than I have for{" "}
+        <span className="text-blue-300">@meetgranola</span>.
         <br />
         <br />
-        Everyone thinks they have a good meeting notes app, but it's only once
-        they use Granola they realise what they've been missing.
+        Everyone thinks they have a good meeting notes app, but it&apos;s only
+        once they use Granola they realise what they&apos;ve been missing.
       </p>
       <div className="text-sm text-blue-300">9:34 PM · Apr 3, 2025</div>
       <div className="flex gap-3 mt-3 text-blue-300">

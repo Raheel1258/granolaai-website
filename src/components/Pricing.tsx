@@ -1,9 +1,8 @@
 "use client";
-import { useState } from "react";
 import { CheckCircle, Plus } from "lucide-react";
 
 export default function Pricing() {
-  const [billingPeriod, setBillingPeriod] = useState("monthly");
+  const billingPeriod = "monthly";
 
   const plans = [
     {
