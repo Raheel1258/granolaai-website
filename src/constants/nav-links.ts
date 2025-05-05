@@ -1,7 +1,7 @@
 export const navbarLinks = [
   {
     name: "Pricing",
-    path: "",
+    path: "/pricing",
   },
   {
     name: "News",
