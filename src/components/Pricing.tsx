@@ -55,7 +55,7 @@ export default function Pricing() {
 
   return (
     <main className="flex-1 w-full lg:mx-auto">
-      <section className="absolute inset-x-0 mt-0 h-200">
+      <section className="absolute inset-x-0 mt-0 h-195">
         <div
           className="overflow-visible absolute inset-0 select-none z-0 opacity-60"
           style={{
@@ -67,18 +67,18 @@ export default function Pricing() {
 
       <section className="relative flex flex-col gap-16 items-center px-4 py-16 w-full sm:px-6 md:py-24 lg:gap-32 lg:py-20 lg:px-8 mx-auto mt-16 mb-16 max-w-xl md:grid-cols-1 sm:max-w-full lg:max-w-7xl">
         <div className="flex flex-col gap-4 items-center mx-auto max-w-5xl text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold tracking-tight leading-tight">
+          <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 tracking-tight leading-tight">
             Help your whole
             <br />
             company work smarter
           </h1>
-          <p className="max-w-2xl text-xl font-medium text-gray-600">
+          <p className="max-w-2xl text-xl font-medium text-gray-500">
             With Granola, both teams and individuals can share knowledge more
             easily, keeping on top of the things that matter
           </p>
         </div>
 
-        <div className="grid w-full gap-6 sm:grid-cols-3">
+        <div className="grid w-full gap-4 sm:grid-cols-3">
           {plans.map((plan, i) => (
             <div
               key={i}
@@ -94,22 +94,28 @@ export default function Pricing() {
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="flex flex-col gap-2">
-                    <button className="w-full flex items-center justify-center px-4 py-4 border border-green-600 rounded-md shadow-sm bg-green-600 text-white text-sm font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                      <span className="mr-2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></svg>
-                      </span>
-                      {plan.androidButton}
-                    </button>
+                    <div className="flex flex-col gap-2">
+                      <button className="w-full flex items-center justify-center px-4 py-4 rounded-md shadow-sm bg-[#8DEE6C] text-black font-semibold text-sm font-medium hover:bg-[#8DEE6C] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                        {plan.name === "Free trial" ? (
+                          <>
+                            <span className="mr-2">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                              >
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+                              </svg>
+                            </span>
+                            {plan.androidButton}
+                          </>
+                        ) : (
+                          plan.androidButton
+                        )}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,25 +153,25 @@ export default function Pricing() {
           ))}
         </div>
 
-        <section className="w-full p-6 rounded-2xl border backdrop-blur-lg transition-colors lg:mt-0 bg-white/60 hover:bg-white/80">
-          <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+        <section className="w-full max-w-4xl p-6 rounded-2xl border backdrop-blur-lg transition-colors mt-0 bg-white/60 hover:bg-white/80 mx-auto">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
             <header className="flex flex-col gap-2 items-start">
-              <h2 className="text-lg font-semibold">Enterprise</h2>
+              <h2 className="text-lg font-bold">Enterprise</h2>
               <p className="flex gap-2 items-baseline">
-                <span className="text-3xl font-semibold">Starts at $35</span>
+                <span className="text-3xl font-bold">Starts at $35</span>
                 <span className="text-sm text-gray-500">
                   per user per month
                 </span>
               </p>
               <div className="flex gap-4 mt-2">
                 <a
-                  className="relative px-6 py-3 font-medium rounded-lg border-2 border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-gray-300 bg-white/60 hover:bg-white hover:-translate-y-1"
+                  className="px-4 py-2 font-medium rounded-lg border-2 border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-gray-300 bg-white/60 hover:bg-white hover:-translate-y-1"
                   href="#"
                 >
                   Talk to us
                 </a>
                 <a
-                  className="relative px-6 py-3 font-medium rounded-lg border-2 border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-gray-300 bg-white/60 hover:bg-white hover:-translate-y-1"
+                  className="px-4 py-2 font-medium rounded-lg border-2 border-gray-200 shadow-md transition-all hover:shadow-lg hover:border-gray-300 bg-white/60 hover:bg-white hover:-translate-y-1"
                   href="#"
                 >
                   Learn more

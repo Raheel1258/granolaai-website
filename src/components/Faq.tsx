@@ -114,7 +114,7 @@ export default function GranolaPricingPage() {
   ];
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen py-0">
       <Testimonial />
       <FAQSection faqs={faqs} />
       <ResourcesSection resources={resources} />
