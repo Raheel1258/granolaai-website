@@ -42,7 +42,7 @@ const HeroSection = () => {
         <h2 className="px-14 w-full max-w-2xl text-lg font-medium leading-tight text-center lg:text-2xl text-colored-secondary">
           Granola takes your raw meeting notes and makes them awesome
         </h2>
-        <div className="flex flex-col">
+        <div className="flex flex-col sm:flex-row gap-3">
           <DeviceDrawer
             trigger={
               <button
@@ -53,7 +53,7 @@ const HeroSection = () => {
                 aria-controls="radix-:rv:"
                 data-state="closed"
               >
-                <span>Send me a download link</span>
+                <span>Book Demo</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -72,6 +72,26 @@ const HeroSection = () => {
             }
             content={<DeviceDrawerContent />}
           />
+          <button
+            className="flex-none bg-white justify-center flex gap-2 items-center hover:bg-black/5 text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-base lg:text-xl border border-neutral-200 group relative overflow-hidden duration-75 z-20 px-6 h-12 lg:h-14 transition-all cursor-pointer lg:pl-7 lg:pr-4"
+            type="button"
+          >
+            <span>Try for Free</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+              className="w-5 h-5 opacity-30"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
 
