@@ -2,8 +2,6 @@ import { footerLinks, otherFooterLinks } from "@/constants/nav-links";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import DeviceDrawer from "./DeviceDrawer";
-import DeviceDrawerContent from "./DeviceDrawerContent";
 
 const Footer = () => {
   return (

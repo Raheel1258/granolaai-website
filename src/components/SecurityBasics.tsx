@@ -9,10 +9,10 @@ export const SecurityBasics = () => {
           calendar.
         </li>
         <li>
-          You have to manually start Granola for a meeting (it won't auto-join
-          or auto-record anything). Granola then accesses your microphone audio,
-          and your meeting audio on Mac, and transcribes it. It does not add a
-          bot to your video call.
+          You have to manually start Granola for a meeting (it won&rsquo;t
+          auto-join or auto-record anything) . Granola then accesses your
+          microphone audio, and your meeting audio on Mac, and transcribes it.
+          It does not add a bot to your video call.
         </li>
         <li>
           Granola for Mac works with any meeting platform. Zoom, Meet, Teams,
@@ -41,10 +41,10 @@ export const SecurityBasics = () => {
       <h2 className="mt-8 text-colored">No stored recordings</h2>
       <ul className="list-disc pl-6 space-y-3">
         <li>
-          Granola doesn't store the audio from meetings - it transcribes in real
-          time on Mac, or after your meeting on iPhone using temporarily cached
-          audio. It only stores the transcript (and any notes you provide) from
-          a call.
+          Granola doesn&rsquo;t store the audio from meetings - it transcribes
+          in real time on Mac, or after your meeting on iPhone using temporarily
+          cached audio. It only stores the transcript (and any notes you
+          provide) from a call.
         </li>
       </ul>
 
@@ -70,12 +70,12 @@ export const SecurityBasics = () => {
         </li>
         <li>
           Granola is built and maintained by our top-tier engineering team,
-          who've built scalable infrastructure for companies like Apple, Amazon,
-          Google, and Meta.
+          you&rsquo;ve built scalable infrastructure for companies like Apple,
+          Amazon, Google, and Meta.
         </li>
       </ul>
 
-      <h2 className="mt-8 text-colored">We're here if you need us</h2>
+      <h2 className="mt-8 text-colored">We&rsquo;re here if you need us</h2>
       <ul className="list-disc pl-6 space-y-3">
         <li>
           If you have more questions, please

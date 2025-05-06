@@ -55,7 +55,7 @@ export const BenefitsSection: React.FC = () => {
               </h1>
               <div className="mx-10 mt-10">
                 <p className="text-[1rem] md:text-[1.25rem] leading-tight">
-                  It's not just time savings. It's peace of mind,
+                  It&rsquo;s not just time savings. It&rsquo;s peace of mind,
                   client-experience, and future-proofing.
                 </p>
               </div>
