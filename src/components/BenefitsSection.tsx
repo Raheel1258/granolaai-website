@@ -1,48 +1,7 @@
+import { benefitsData } from "@/constants/benefits-data";
 import { BenefitCard } from "./BenefitsCard";
-import {
-  CheckBadgeIcon,
-  SparklesIcon,
-  ThumbsUpIcon,
-  UserIcon,
-} from "./ui/icons";
 
 export const BenefitsSection: React.FC = () => {
-  // Define all benefits data
-  const benefitsData = [
-    {
-      icon: <ThumbsUpIcon className="w-8 h-8 text-blue" />,
-      title: "Dramatically elevate client service",
-      benefits: [
-        "Stay 100% present in client meetings",
-        "Never let anything slip through the cracks",
-      ],
-    },
-    {
-      icon: <UserIcon className="w-8 h-8 text-purple" />,
-      title: "Spend time on clients, not admin tasks",
-      benefits: [
-        "Spend 4 minutes, not 40, on post-meeting work",
-        "Prep with an AI one-pager for every meeting",
-      ],
-    },
-    {
-      icon: <CheckBadgeIcon className="w-8 h-8 text-green" />,
-      title: "Stay compliant",
-      benefits: [
-        "Audit-friendly meeting notes for every meeting",
-        "You control client data and record retention",
-      ],
-    },
-    {
-      icon: <SparklesIcon className="w-8 h-8 text-yellow" />,
-      title: "AI future-proof your firm",
-      benefits: [
-        "Jump is the leading edge of advisor-centric AI",
-        "We release new features daily",
-      ],
-    },
-  ];
-
   return (
     <div className="py-20 md:py-36">
       <div className="grid grid-cols-12 gap-4 lg:gap-8 mx-auto w-full xl:w-[1280px] px-4 lg:px-10 xl:px-2">

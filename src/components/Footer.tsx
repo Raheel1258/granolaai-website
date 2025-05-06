@@ -15,7 +15,7 @@ const Footer = () => {
             Try Granola for a few meetings today. It&apos;s free to get started.
           </p>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <button
             className="flex-none bg-[#82de68] justify-center flex gap-2 items-center from-accent to-accent-strong hover:scale-[101%] transform-gpu text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-sm sm:text-base lg:text-xl shadow-[inset_0px_0.5px_1px_rgb(255_255_255_/_0.5)] group relative overflow-hidden duration-75 z-20 px-3 sm:px-6 h-10 sm:h-12 lg:h-14 transition-all cursor-pointer whitespace-nowrap"
             type="button"
