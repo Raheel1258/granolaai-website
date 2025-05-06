@@ -22,21 +22,20 @@ export const BenefitsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Benefits cards - first row */}
-        <div className="col-start-1 col-end-13 sm:col-start-1 sm:col-end-7 md:col-start-2 md:col-end-7">
-          <BenefitCard {...benefitsData[0]} />
-        </div>
-        <div className="col-start-1 col-end-13 sm:col-start-7 sm:col-end-13 md:col-start-7 md:col-end-12">
-          <BenefitCard {...benefitsData[1]} />
-        </div>
+        {/* Benefits cards using map */}
+        {benefitsData.map((benefit, index) => {
+          // Determine the grid classes based on index
+          const isEven = index % 2 === 0;
+          const gridClasses = isEven
+            ? "col-start-1 col-end-13 sm:col-start-1 sm:col-end-7 md:col-start-2 md:col-end-7"
+            : "col-start-1 col-end-13 sm:col-start-7 sm:col-end-13 md:col-start-7 md:col-end-12";
 
-        {/* Benefits cards - second row */}
-        <div className="col-start-1 col-end-13 sm:col-start-1 sm:col-end-7 md:col-start-2 md:col-end-7">
-          <BenefitCard {...benefitsData[2]} />
-        </div>
-        <div className="col-start-1 col-end-13 sm:col-start-7 sm:col-end-13 md:col-start-7 md:col-end-12">
-          <BenefitCard {...benefitsData[3]} />
-        </div>
+          return (
+            <div key={index} className={gridClasses}>
+              <BenefitCard {...benefit} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
