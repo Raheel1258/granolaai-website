@@ -25,7 +25,7 @@ export const newsData: NewsItemType[] = [
     type: "blog",
     author: {
       name: "Jim Fisher",
-      image: "/_next/image?url=%2Fteam%2Fjim.avif&w=48&q=75",
+      image: "/jim.webp", // Changed to direct path
     },
   },
   {
@@ -69,7 +69,7 @@ export const newsData: NewsItemType[] = [
     type: "blog",
     author: {
       name: "Chris Pedregal",
-      image: "/_next/image?url=%2Fteam%2Fchris.jpg&w=48&q=75",
+      image: "/chris.webp",
     },
   },
   {
@@ -97,7 +97,7 @@ export const newsData: NewsItemType[] = [
     type: "blog",
     author: {
       name: "Jim Fisher",
-      image: "/_next/image?url=%2Fteam%2Fjim.avif&w=48&q=75",
+      image: "/jim.webp",
     },
   },
   {
@@ -116,7 +116,7 @@ export const newsData: NewsItemType[] = [
     type: "blog",
     author: {
       name: "Jo Barrow",
-      image: "/_next/image?url=%2Fteam%2Fjo.jpg&w=48&q=75",
+      image: "/jo.webp",
     },
   },
   {
@@ -127,7 +127,7 @@ export const newsData: NewsItemType[] = [
     type: "blog",
     author: {
       name: "Chris Pedregal",
-      image: "/_next/image?url=%2Fteam%2Fchris.jpg&w=48&q=75",
+      image: "/chris.webp",
     },
   },
 ];

@@ -4,12 +4,8 @@ export const navbarLinks = [
     path: "/pricing",
   },
   {
-    name: "News",
-    path: "/blog",
-  },
-  {
-    name: "Careers",
-    path: "",
+    name: "Privacy & Security",
+    path: "/privacy",
   },
 ];
 
@@ -28,7 +24,7 @@ export const footerLinks = [
   },
   {
     name: "Privacy & Security",
-    path: "",
+    path: "/privacy",
   },
 ];
 

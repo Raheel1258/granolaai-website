@@ -1,7 +1,8 @@
-import React from 'react';
-import MeetingToWork from './MeetingToWork';
-import NoteTemplateTabs from './NoteTemplateTabs';
-import ShareNotes from './ShareNotes';
+import React from "react";
+import MeetingToWork from "./MeetingToWork";
+import NoteTemplateTabs from "./NoteTemplateTabs";
+import ShareNotes from "./ShareNotes";
+import { BenefitsSection } from "./BenefitsSection";
 
 const GradientSectionWrapper: React.FC = () => {
   return (
@@ -18,9 +19,10 @@ const GradientSectionWrapper: React.FC = () => {
         <NoteTemplateTabs />
         <MeetingToWork />
         <ShareNotes />
+        <BenefitsSection />
       </div>
     </div>
   );
 };
 
-export default GradientSectionWrapper; 
+export default GradientSectionWrapper;

@@ -18,51 +18,46 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col gap-4">
-          <DeviceDrawer
-            trigger={
-              <button
-                className="flex-none bg-[#82de68] justify-center flex gap-2 items-center from-accent to-accent-strong hover:scale-[101%] transform-gpu text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-base lg:text-xl shadow-[inset_0px_0.5px_1px_rgb(255_255_255_/_0.5)] group relative overflow-hidden duration-75 z-20 px-6 h-12 lg:h-14 transition-all cursor-pointer lg:pl-7 lg:pr-4"
-                type="button"
-                aria-haspopup="dialog"
-                aria-expanded="false"
-                aria-controls="radix-:rv:"
-                data-state="closed"
-              >
-                {/* Android icon */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5516 0 .9997.4477.9997.9993.0001.5511-.4481.9997-.9997.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5516 0 .9997.4477.9997.9993 0 .5511-.4481.9997-.9997.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1358 1.0989L4.8419 5.4467a.4161.4161 0 0 0-.5677-.1521.4157.4157 0 0 0-.1521.5676l1.9973 3.4592C2.6889 11.1867.343 15.6589 0 20.761h24c-.343-5.1021-2.6889-9.5743-6.1185-11.4396" />
-                </svg>
-                <span>Join the Android waitlist</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                  className="w-5 h-5 opacity-30"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-            }
-            content={<DeviceDrawerContent />}
-          />
+          <button
+            className="flex-none bg-[#82de68] justify-center flex gap-2 items-center from-accent to-accent-strong hover:scale-[101%] transform-gpu text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-sm sm:text-base lg:text-xl shadow-[inset_0px_0.5px_1px_rgb(255_255_255_/_0.5)] group relative overflow-hidden duration-75 z-20 px-3 sm:px-6 h-10 sm:h-12 lg:h-14 transition-all cursor-pointer whitespace-nowrap"
+            type="button"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="radix-:rv:"
+            data-state="closed"
+          >
+            {/* Android icon - made smaller on mobile */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+            >
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+            </svg>
+            <span>Join the Windows waitlist</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+              className="w-4 h-4 sm:w-5 sm:h-5 opacity-30"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
           <button
             className="flex-none bg-white justify-center flex gap-2 items-center hover:scale-[101%] transform-gpu text-black rounded-full focus:ring-2 focus:ring-gray-300 font-medium focus:ring-offset-2 focus:outline-none text-base lg:text-xl shadow-[0_1px_3px_rgba(0,0,0,0.1)] group relative overflow-hidden duration-75 z-20 px-6 h-12 lg:h-14 transition-all cursor-pointer lg:pl-7 lg:pr-4 border border-gray-200 hover:border-gray-300"
             type="button"
           >
-            {/* Apple icon */}
+            {/* Mobile phone icon with top/bottom lines */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -71,9 +66,14 @@ const Footer = () => {
               fill="currentColor"
               className="w-5 h-5"
             >
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+              <path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 19H7V4h10v16z" />
+              <path
+                d="M12 17.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5-.5.22-.5.5.22.5.5.5z"
+                fillRule="evenodd"
+              />
+              <rect x="11" y="5" width="2" height="1" rx=".5" />
             </svg>
-            <span>Get the Mac App</span>
+            <span>Download for iPhone</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Testimonial = () => {
   return (
-    <div className="my-0 p-6 border rounded-xl bg-gray-900 text-white shadow-md max-w-xl mx-auto">
+    <div className="mt-4 p-6 border rounded-xl bg-gray-900 text-white shadow-md max-w-xl mx-auto">
       <div className="flex items-center gap-3 pb-3 mb-3">
         <div className="w-12 h-12 rounded-full overflow-hidden">
           <Image

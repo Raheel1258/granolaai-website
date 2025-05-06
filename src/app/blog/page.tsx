@@ -18,7 +18,7 @@ export default function NewsPage() {
   return (
     <main className="flex-1 w-full lg:mx-auto">
       <section className="px-6 pt-40 mx-auto w-full max-w-2xl min-h-screen">
-        <h1 className="mb-8 text-6xl font-bold tracking-tight text-primary">
+        <h1 className="mb-8 text-5xl font-bold tracking-tight text-primary">
           News
         </h1>
 

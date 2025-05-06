@@ -5,11 +5,11 @@ const BuiltForPeople = () => {
   return (
     <section className="flex overflow-visible relative flex-col gap-16 px-4 py-16 w-full max-w-3xl sm:px-6 md:py-24 lg:py-20 lg:px-8 lg:max-w-6xl items-center lg:gap-12">
       <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8">
-        <h2 className="text-3xl lg:text-4xl text-colored font-semibold tracking-[-0.015em] leading-[0.95] whitespace-nowrap">
+        <h2 className="text-3xl lg:text-4xl text-colored font-bold tracking-[-0.015em] leading-[0.95]">
           What people are saying about Granola
         </h2>
       </div>
-      <div className="max-w-4xl md:max-w-6xl w-full col-span-5 md:columns-3 mt-4">
+      <div className="max-w-4xl md:max-w-6xl w-full col-span-5 md:columns-3 mt-2">
         <div className="flex flex-row md:block w-full overflow-x-auto md:overflow-visible gap-4 md:gap-0 px-4 md:px-0 hide-scrollbar">
           <TweetCard
             displayName="Nat Friedman"
