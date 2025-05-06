@@ -65,7 +65,7 @@ const Navbar = () => {
           <DeviceDrawer
             trigger={
               <Button
-                variant={"green"}
+                variant={isScrolled ? "green" : "default"}
                 className="flex items-center text-sm px-2"
               >
                 <span className="mr-1">
