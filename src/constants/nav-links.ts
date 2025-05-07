@@ -46,3 +46,5 @@ export const otherFooterLinks = [
     path: "",
   },
 ];
+
+export const calendlyLink = "https://calendly.com/abdennouraissaoui/meeting-with-abdennour";
