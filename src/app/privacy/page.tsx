@@ -1,8 +1,8 @@
 import { ComplianceCard } from "@/components/ComplianceCard";
-import { PrivacySection } from "@/components/PrivacySection";
 import { SecurityBasics } from "@/components/SecurityBasics";
 import { SecurityFAQ } from "@/components/SecurityFAQ";
-import { TermsSection } from "@/components/TermSection";
+// import { TermsSection } from "@/components/TermSection";
+// import { PrivacySection } from "@/components/PrivacySection";
 import React from "react";
 
 export default function SecurityPage() {
@@ -31,21 +31,18 @@ export default function SecurityPage() {
         <div className="flex flex-col grid-cols-5 gap-16 antialiased md:gap-16 lg:gap-24 md:grid">
           <aside className="overflow-hidden relative col-span-2 col-start-4 space-y-4">
             <ComplianceCard
-              title="SOC-2"
-              status="In progress"
-              description="We're working with Vanta to achieve full SOC-2 compliance"
-              linkText="See our Trust page"
-              linkUrl="https://trust.granola.ai"
-              iconType="stars"
+              title="TLS 1.2"
+              description="We use strong encryption, in transit and at rest, using TLS 1.2, and strong hashing algorithms"
+              iconType="shield"
               bgColor="bg-sky-700"
             />
 
             <ComplianceCard
-              title="GDPR"
-              description="We're committed to GDPR compliance and have a Data Processing Agreement available upon request"
+              title="Artificial Intelligence"
+              description="NestQ uses AI models to power parts of the application. As per the contract with our cloud providers, we own the input and output of these models, and no information is ever shared or used in training. AI is as safe as any other cloud service such as a database. available upon request"
               linkText="Read our Privacy Policy"
-              linkUrl="https://www.granola.ai/docs/policies/privacy/pp"
-              iconType="globe"
+              linkUrl="https://app.nestq.ai/privacy"
+              iconType="ai"
               bgColor="bg-blue-700"
             />
           </aside>
@@ -59,29 +56,16 @@ export default function SecurityPage() {
 
         <SecurityFAQ />
 
-        <div className="mx-auto w-full max-w-xl h-px bg-teal-700/10 mt-4" />
+        {/* <div className="mx-auto w-full max-w-xl h-px bg-teal-700/10 mt-4" /> */}
 
-        <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8">
+        {/* <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8">
           <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
             Terms & Policies
           </h2>
-        </div>
+        </div> */}
 
-        <TermsSection />
-        <PrivacySection />
-
-        <p className="flex col-span-full gap-2 justify-center items-center -my-8 text-center rounded-lg text-secondary">
-          <span className="inline text-gray-800">
-            Need more company-wide controls?
-            <a
-              className="inline underline underline-offset-2 decoration-tertiary hover:decoration-accent-strong hover:text-accent-strong"
-              href="/contact/sales?source=security_page"
-              title="Email sales"
-            >
-              Talk to us about Enterprise
-            </a>
-          </span>
-        </p>
+        {/* <TermsSection /> */}
+        {/* <PrivacySection /> */}
       </section>
     </main>
   );

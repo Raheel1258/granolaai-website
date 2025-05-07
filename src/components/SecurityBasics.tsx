@@ -1,87 +1,88 @@
+import { calendlyLink } from "@/constants/nav-links";
+
 export const SecurityBasics = () => {
   return (
     <>
-      <h2 className="text-colored">The basics</h2>
+      <h2 className="text-colored">How NestQ Works with Your Meetings</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          Granola is an app for macOS and iPhone, a lot like Apple Notes or
-          Notion. It requires Google Workspace login and integrates with your
-          calendar.
+          NestQ offers flexible options for capturing client conversations:
+          <ul className="list-circle pl-6 mt-2 space-y-1">
+            <li>
+              <strong>Web App:</strong> Use in your browser for in-person meeting notes, to record unscheduled calls, or connect to your calendar for scheduled virtual meetings.
+            </li>
+            <li>
+              <strong>Phone App:</strong> Ideal for capturing in-person meeting details on the go.
+            </li>
+          </ul>
         </li>
         <li>
-          You have to manually start Granola for a meeting (it won&rsquo;t
-          auto-join or auto-record anything) . Granola then accesses your
-          microphone audio, and your meeting audio on Mac, and transcribes it.
-          It does not add a bot to your video call.
+          <strong>Calendar Integration:</strong> NestQ seamlessly integrates with your calendar (e.g., Google, Outlook) to identify and prepare for your scheduled meetings.
         </li>
         <li>
-          Granola for Mac works with any meeting platform. Zoom, Meet, Teams,
-          you name it. Granola for iPhone is built for in-person meetings.
+          For virtual meetings, you have choices:
+          <ul className="list-circle pl-6 mt-2 space-y-1">
+            <li>Allow NestQ to automatically join as a participant (bot) using trusted third-party services like Recall.ai or Meeting Bass.</li>
+            <li>Manually activate recording via the NestQ web app during your meeting.</li>
+          </ul>
         </li>
         <li>
-          Granola uses best-in-class transcription providers (like Deepgram and
-          Assembly) and AI providers (like OpenAI and Anthropic) to summarize
-          your meeting.
+          NestQ is compatible with all major meeting platforms, including Zoom, Google Meet, and Microsoft Teams.
+        </li>
+        <li>
+          We partner with leading AI providers like OpenAI for intelligent summarization and utilize high-quality transcription services to ensure accuracy.
         </li>
       </ul>
 
-      <h2 className="mt-8 text-colored">Model training</h2>
+      <h2 className="mt-8 text-colored">AI Model Training & Your Data Privacy</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          We do not allow third parties (like OpenAI or Anthropic) to use your
-          data to train their AI models.
-        </li>
-        <li>
-          Granola trains on your anonymized data so we can keep making Granola
-          better. You can opt out of this in your Settings.
-        </li>
-        <li>Enterprise users have model training turned off by default.</li>
-      </ul>
-
-      <h2 className="mt-8 text-colored">No stored recordings</h2>
-      <ul className="list-disc pl-6 space-y-3 text-gray-400">
-        <li>
-          Granola doesn&rsquo;t store the audio from meetings - it transcribes
-          in real time on Mac, or after your meeting on iPhone using temporarily
-          cached audio. It only stores the transcript (and any notes you
-          provide) from a call.
+          <strong>Your Data Stays Yours:</strong> We strictly prohibit third-party AI providers, such as OpenAI, from using your client data to train their general AI models. Your information is processed solely to provide NestQ&apos;s services to you.
         </li>
       </ul>
 
-      <h2 className="mt-8 text-colored">You control who sees your notes</h2>
+      <h2 className="mt-8 text-colored">Audio Recordings & Transcripts</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          As a user, you control who sees your notes. Notes are private by
-          default, until you choose to share them with others.
+          <strong>Minimal Audio Handling:</strong> NestQ is designed to minimize audio storage. Audio is captured only for transcription.
         </li>
         <li>
-          You can delete individual notes, or request deletion of all your data
-          at any time.
+           When bot-assisted recording is used (via Recall.ai or Meeting Bass), these services handle initial audio capture and transcription per their strict security protocols. NestQ only receives and stores the final text transcript.
+        </li>
+      </ul>
+
+      <h2 className="mt-8 text-colored">You Control Your Data</h2>
+      <ul className="list-disc pl-6 space-y-3 text-gray-400">
+        <li>
+          <strong>Privacy by Default:</strong> All your notes and transcripts are private by default. You decide if, when, and with whom to share them.
+        </li>
+        <li>
+          <strong>Full Retention & Deletion Control:</strong> You have complete authority over your data. Delete individual notes or request the deletion of your entire dataset at any time, in line with your firm&apos;s data retention policies.
         </li>
       </ul>
 
       <h2 className="mt-8 text-colored">
-        Everything stored in industry standard, encrypted infrastructure
+        Secure, Encrypted Infrastructure
       </h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          Notes are stored in our US-hosted AWS Virtual Private Cloud. They are
-          encrypted at rest and in transit. They are backed up daily.
+          <strong>Encrypted Storage:</strong> Your transcripts and notes are stored in our Canada-hosted Azure Virtual Private Cloud, encrypted both at rest and in transit using industry-standard protocols.
         </li>
         <li>
-          Granola is built and maintained by our top-tier engineering team,
-          you&rsquo;ve built scalable infrastructure for companies like Apple,
-          Amazon, Google, and Meta.
+          <strong>Reliable Backups:</strong> Data is backed up daily to ensure integrity and availability.
+        </li>
+        <li>
+          <strong>Expert Engineering Team:</strong> NestQ is built and maintained by a top-tier engineering team with extensive experience creating secure, scalable infrastructure.
         </li>
       </ul>
 
-      <h2 className="mt-8 text-colored">We&rsquo;re here if you need us</h2>
+      <h2 className="mt-8 text-colored">We’re Here to Help</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          If you have more questions, please {""}
+          If you have more security questions, please {""}
           <a
             className="underline underline-offset-2 decoration-tertiary hover:decoration-accent-strong hover:text-accent-strong"
-            href="/contact/sales"
+            href={calendlyLink}
           >
             reach out to our team.
           </a>

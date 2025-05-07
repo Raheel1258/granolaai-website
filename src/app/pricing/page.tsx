@@ -1,7 +1,7 @@
 import BuiltForPeople from "@/components/BuiltForPeople";
 import GranolaPricingPage from "../../components/Faq";
 import Pricing from "../../components/Pricing";
-import TrustedBySection from "@/components/TrustedBySection";
+// import TrustedBySection from "@/components/TrustedBySection";
 
 export default function Page() {
   return (
@@ -9,7 +9,7 @@ export default function Page() {
       <Pricing />
       <GranolaPricingPage />
       <BuiltForPeople />
-      <TrustedBySection />
+      {/* <TrustedBySection /> */}
     </main>
   );
 }

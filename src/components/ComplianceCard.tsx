@@ -1,14 +1,21 @@
 import React from "react";
-import { GlobeIcon, StarsIcon } from "./ui/icons";
+import { SparklesIcon, ShieldIcon, GlobeIcon } from "./ui/icons";
 interface ComplianceCardProps {
   title: string;
   status?: string;
   description: string;
-  linkText: string;
-  linkUrl: string;
-  iconType: "stars" | "globe";
+  linkText?: string;
+  linkUrl?: string;
+  iconType: "shield" | "globe" | "lock" | "ai";
   bgColor: string;
 }
+
+const iconMap = {
+  shield: ShieldIcon,
+  ai: SparklesIcon,
+  lock: ShieldIcon,
+  globe: GlobeIcon,
+};
 
 export const ComplianceCard: React.FC<ComplianceCardProps> = ({
   title,
@@ -19,11 +26,12 @@ export const ComplianceCard: React.FC<ComplianceCardProps> = ({
   iconType,
   bgColor,
 }) => {
+  const IconComponent = iconMap[iconType as keyof typeof iconMap];
   return (
     <div className="flex sticky top-0 gap-4 items-start p-4 rounded-xl border bg-white/80">
       <div className={`flex-none w-16 h-16 ${bgColor} rounded-full`}>
         <div className="grid relative place-items-center w-full h-full">
-          {iconType === "stars" ? <StarsIcon /> : <GlobeIcon />}
+          {IconComponent && <IconComponent className="w-8 h-8 text-white" />}
         </div>
       </div>
       <div className="flex flex-col w-full">

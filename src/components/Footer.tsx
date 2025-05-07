@@ -12,7 +12,7 @@ const Footer = () => {
             Ready for calmer, more productive meetings?
           </h2>
           <p className="text-xl font-medium lg:text-2xl text-gray-500">
-            Try Granola for a few meetings today. It&apos;s free to get started.
+            Try NestQ for a few meetings today. It&apos;s free to get started.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
@@ -35,7 +35,7 @@ const Footer = () => {
             >
               <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
             </svg>
-            <span>Join the Windows waitlist</span>
+            <span>Book a demo</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -71,7 +71,7 @@ const Footer = () => {
               />
               <rect x="11" y="5" width="2" height="1" rx=".5" />
             </svg>
-            <span>Download for iPhone</span>
+            <span>Try for free</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -264,13 +264,10 @@ const Footer = () => {
             height={16}
           />
         </Link>
-        <Link href={""} className="flex items-center justify-center">
-          <Image src={"/x-icon.svg"} alt="x" width={16} height={16} />
-        </Link>
       </div>
       <div className="flex flex-col gap-2 items-end mx-auto w-full max-w-7xl md:items-center md:gap-4 md:flex-row text-tertiary">
-        <p>© Granola inc 2025</p>
-        <p>Made with ♥︎ in Shoreditch</p>
+        <p>© NestQ inc 2025</p>
+        <p>Made with ♥︎ in Canada</p>
         <div className="flex-1"></div>
         {otherFooterLinks.map((link, index: number) => {
           return (

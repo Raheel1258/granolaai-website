@@ -139,8 +139,8 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="flex flex-col items-end gap-2">
-              <p>© Granola inc 2025</p>
-              <p>Made with ♥︎ in Shoreditch</p>
+              <p>© NestQ inc 2025</p>
+              <p>Made with ♥︎ in Canada</p>
               {otherFooterLinks.map((link, index: number) => (
                 <Link key={index} href={link.path} className="hover:underline">
                   {link.name}
