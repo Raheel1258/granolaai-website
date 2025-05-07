@@ -8,17 +8,17 @@ import {
 export const benefitsData = [
   {
     icon: <ThumbsUpIcon className="w-8 h-8 text-blue" />,
-    title: "Dramatically elevate client service",
+    title: "Deliver Exceptional Client Experiences",
     benefits: [
-      "Stay 100% present in client meetings",
+      "Be fully present in every client conversation.",
       "Never let anything slip through the cracks",
     ],
   },
   {
     icon: <UserIcon className="w-8 h-8 text-purple" />,
-    title: "Spend time on clients, not admin tasks",
+    title: "Focus on Clients, Not Tedious Admin",
     benefits: [
-      "Spend 4 minutes, not 40, on post-meeting work",
+      "Get client follow-up emails drafted in seconds.",
       "Prep with an AI one-pager for every meeting",
     ],
   },
@@ -26,15 +26,14 @@ export const benefitsData = [
     icon: <CheckBadgeIcon className="w-8 h-8 text-green" />,
     title: "Stay compliant",
     benefits: [
-      "Audit-friendly meeting notes for every meeting",
-      "You control client data and record retention",
+      "Audit-ready notes for every meeting.",
+      "Your data is confidential—never used for AI model training.",
     ],
   },
   {
     icon: <SparklesIcon className="w-8 h-8 text-yellow" />,
     title: "AI future-proof your firm",
     benefits: [
-      "Jump is the leading edge of advisor-centric AI",
       "We release new features daily",
     ],
   },

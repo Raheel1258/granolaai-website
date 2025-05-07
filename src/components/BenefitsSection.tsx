@@ -10,13 +10,11 @@ export const BenefitsSection: React.FC = () => {
           <div className="mb-16 text-center">
             <div className="mb-12 text-center px-4 sm:px-8 lg:px-0">
               <h1 className="break-normal pb-1 font-extralight text-[2.5rem] sm:text-[3rem] md:text-[3.25rem] lg:text-[5rem] leading-x-tight mb-5 text-jump-gradient pb-1">
-                Everything changes once you start using Jump.
+                Everything changes with NestQ.
               </h1>
               <div className="mx-10 mt-10">
                 <p className="text-[1rem] md:text-[1.25rem] leading-tight">
-                  It&rsquo;s not just time savings. It&rsquo;s peace of mind,
-                  client-experience, and future-proofing.
-                </p>
+                More than time saved: Gain peace of mind, elevate client experiences, and future-proof your practice.                </p>
               </div>
             </div>
           </div>

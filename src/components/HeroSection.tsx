@@ -35,12 +35,10 @@ const HeroSection = () => {
           </svg>
         </a>
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-[-0.020em] text-center leading-[0.9] text-colored">
-          <span className="text-colored-tertiary">The</span> AI notepad{" "}
-          <span className="text-colored-tertiary">for people in</span>{" "}
-          <br className="hidden md:block" /> back-to-back meetings
+          <span className="text-colored-tertiary">The</span> AI Meeting Assistant <span className="text-colored-tertiary">for Financial Advisors</span>
         </h1>
         <h2 className="px-14 w-full max-w-2xl text-lg font-medium leading-tight text-center lg:text-2xl text-colored-secondary">
-          Granola takes your raw meeting notes and makes them awesome
+          NestQ turns client conversations into tasks, notes, and compliance records with secure AI.
         </h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <DeviceDrawer
