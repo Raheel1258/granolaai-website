@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import DeviceDrawer from "./DeviceDrawer";
-import DeviceDrawerContent from "./DeviceDrawerContent";
+import Link from "next/link";
+import { calendlyLink, signupLink } from "@/constants/nav-links";
 
 const HeroSection = () => {
   return (
@@ -14,26 +14,7 @@ const HeroSection = () => {
         }}
       ></div>
       <div className="flex flex-col gap-4 justify-center items-center px-6 pt-28 pb-12 lg:pb-16 lg:gap-8 md:pt-40 lg:pt-40">
-        <a
-          className="px-3 py-1.5 font-medium rounded-full border text-colored hover:bg-neutral-100 transition-colors flex gap-1 items-center"
-          href="/app?utm_source=homepage"
-        >
-          📲 Get iOS early access
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-            data-slot="icon"
-            className="size-4 text-tertiary"
-          >
-            <path
-              fillRule="evenodd"
-              d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-        </a>
+
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-[-0.020em] text-center leading-[0.9] text-colored">
           <span className="text-colored-tertiary">The</span> AI Meeting Assistant <span className="text-colored-tertiary">for Financial Advisors</span>
         </h1>
@@ -41,55 +22,66 @@ const HeroSection = () => {
           NestQ turns client conversations into tasks, notes, and compliance records with secure AI.
         </h2>
         <div className="flex flex-col sm:flex-row gap-3">
-          <DeviceDrawer
-            trigger={
-              <button
-                className="flex-none bg-[#82de68] justify-center flex gap-2 items-center from-accent to-accent-strong hover:scale-[101%] transform-gpu text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-base lg:text-xl shadow-[inset_0px_0.5px_1px_rgb(255_255_255_/_0.5)] group relative overflow-hidden duration-75 z-20 px-6 h-12 lg:h-14 transition-all cursor-pointer lg:pl-7 lg:pr-4"
-                type="button"
-                aria-haspopup="dialog"
-                aria-expanded="false"
-                aria-controls="radix-:rv:"
-                data-state="closed"
-              >
-                <span>Book Demo</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                  className="w-5 h-5 opacity-30"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-            }
-            content={<DeviceDrawerContent />}
-          />
-          <button
-            className="flex-none bg-white justify-center flex gap-2 items-center hover:bg-black/5 text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-base lg:text-xl border border-neutral-200 group relative overflow-hidden duration-75 z-20 px-6 h-12 lg:h-14 transition-all cursor-pointer lg:pl-7 lg:pr-4"
-            type="button"
-          >
-            <span>Try for Free</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-              data-slot="icon"
-              className="w-5 h-5 opacity-30"
+          <Link href={calendlyLink} passHref>
+            <button
+              className="flex-none bg-[#82de68] justify-center flex gap-2 items-center from-accent to-accent-strong hover:scale-[101%] transform-gpu text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-base lg:text-xl shadow-[inset_0px_0.5px_1px_rgb(255_255_255_/_0.5)] group relative overflow-hidden duration-75 z-20 px-6 h-12 lg:h-14 transition-all cursor-pointer lg:pl-7 lg:pr-4"
+              type="button"
             >
-              <path
-                fillRule="evenodd"
-                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                className="w-5 h-5"
+              >
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+              </svg>
+              <span>Book Demo</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+                className="w-5 h-5 opacity-30"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </Link>
+          <Link href={signupLink} passHref>
+            <button
+              className="flex-none bg-white justify-center flex gap-2 items-center hover:bg-black/5 text-colored-primary rounded-full focus:ring-2 focus:ring-accent font-medium focus:ring-offset-2 focus:outline-none text-base lg:text-xl border border-neutral-200 group relative overflow-hidden duration-75 z-20 px-6 h-12 lg:h-14 transition-all cursor-pointer lg:pl-7 lg:pr-4"
+              type="button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                className="w-5 h-5"
+              >
+                <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z" />
+              </svg>
+              <span>Try for Free</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+                className="w-5 h-5 opacity-30"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </Link>
         </div>
       </div>
 
