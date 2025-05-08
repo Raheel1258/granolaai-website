@@ -10,41 +10,20 @@ export const navbarLinks = [
 ];
 
 export const footerLinks = [
-  {
-    name: "Help Center",
-    path: "",
-  },
-  {
-    name: "Contact Us",
-    path: "",
-  },
-  {
-    name: "Status page",
-    path: "",
-  },
-  {
-    name: "Privacy",
-    path: "/privacy",
-  },
+
 ];
 
 export const otherFooterLinks = [
   {
     name: "Privacy Policy",
-    path: "",
+    path: "https://app.nestq.ai/privacy",
   },
   {
     name: "Terms of Service",
-    path: "",
-  },
-  {
-    name: "Press Kit",
-    path: "",
-  },
-  {
-    name: "License",
-    path: "",
+    path: "https://app.nestq.ai/terms",
   },
 ];
 
 export const calendlyLink = "https://calendly.com/abdennouraissaoui/meeting-with-abdennour";
+export const signupLink = "https://app.nestq.ai/signin";
+export const linkedinLink = "https://www.linkedin.com/company/107086581";
