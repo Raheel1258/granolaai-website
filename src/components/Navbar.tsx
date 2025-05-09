@@ -4,13 +4,12 @@ import {
   footerLinks,
   navbarLinks,
   otherFooterLinks,
+  calendlyLink,
 } from "@/constants/nav-links";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import DeviceDrawer from "./DeviceDrawer";
-import DeviceDrawerContent from "./DeviceDrawerContent";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,28 +61,25 @@ const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <DeviceDrawer
-            trigger={
-              <Button
-                variant={isScrolled ? "green" : "default"}
-                className="flex items-center text-sm px-2"
-              >
-                <span className="mr-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
-                  </svg>
-                </span>
-                Join waitlist
-              </Button>
-            }
-            content={<DeviceDrawerContent />}
-          />
+          <Link href={calendlyLink} passHref>
+            <Button
+              variant={isScrolled ? "green" : "default"}
+              className="flex items-center text-sm px-2"
+            >
+              <span className="mr-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                </svg>
+              </span>
+              Book a Demo
+            </Button>
+          </Link>
 
           {/* Mobile menu icon */}
           <button className="sm:hidden flex p-[8px]" onClick={toggleMenu}>

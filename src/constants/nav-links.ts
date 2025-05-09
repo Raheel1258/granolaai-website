@@ -1,11 +1,15 @@
 export const navbarLinks = [
   {
+    name: "Platform",
+    path: "/#platform",
+  },
+  {
     name: "Pricing",
     path: "/pricing",
   },
   {
-    name: "Privacy",
-    path: "/privacy",
+    name: "Security",
+    path: "/security",
   },
 ];
 
