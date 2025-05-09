@@ -5,7 +5,7 @@ const HowItWorks = () => {
   return (
     <section className="overflow-visible relative flex-col px-4 py-16 w-full max-w-3xl sm:px-6 md:py-24 lg:py-20 lg:px-8 lg:max-w-6xl grid gap-2 items-stretch lg:gap-6 lg:grid-cols-2">
       <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8 mb-8">
-        <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
+        <h2 id="platform" className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
           How it works
         </h2>
       </div>
