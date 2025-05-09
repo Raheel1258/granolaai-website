@@ -18,7 +18,7 @@ const GradientSectionWrapper: React.FC = () => {
       <div className="w-full max-w-[1400px] flex flex-col items-center">
         <NoteTemplateTabs />
         <MeetingToWork />
-        <ShareNotes />
+        {/* <ShareNotes /> */}
         <BenefitsSection />
       </div>
     </div>

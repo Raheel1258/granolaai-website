@@ -6,16 +6,61 @@ const NoteTemplateSection = () => {
   const [activeTab, setActiveTab] = useState("Customer discovery");
   const [version, setVersion] = useState(0);
 
-  const templates = [
-    "Customer discovery",
-    "1 on 1",
-    "User Interview",
-    "Pitch",
-    "Standup",
-  ];
+  const templatesData: Record<string, { title: string; headings: string[] }> = {
+    "Client Meeting": {
+      title: "Client Meeting",
+      headings: [
+        "Meeting Summary",
+        "Follow-Up Tasks",
+        "Client's Talking Points",
+        "Account Actions",
+        "Summary By Topics"
+      ]
+    },
+    "General Meeting": {
+      title: "General Meeting",
+      headings: [
+        "General Meeting Summary",
+        "Follow-Up Tasks",
+        "Summary By Topics",
+        "Conversation Timeline"
+      ]
+    },
+    "Plan Review": {
+      title: "Plan Review",
+      headings: [
+        "Meeting Summary",
+        "Follow-Up Tasks",
+        "Client's Talking Points",
+        "Account Actions",
+        "Summary By Topics"
+      ]
+    },
+    "Onboarding / Discovery": {
+      title: "Onboarding / Discovery",
+      headings: [
+        "Meeting Summary",
+        "Follow-Up Tasks",
+        "Client's Talking Points",
+        "Accounts To Be Opened",
+        "Summary By Topics"
+      ]
+    },
+    "Planning Meeting": {
+      title: "Planning Meeting",
+      headings: [
+        "Meeting Summary",
+        "Follow-Up Tasks",
+        "Client's Talking Points",
+        "Financial Facts Captured",
+        "Structured Data Points"
+      ]
+    }
+  };
+  const templateNames = Object.keys(templatesData);
 
-  const renderTemplateContent = (template: string) => {
-    const keyPrefix = template.replace(/\s/g, "-").toLowerCase();
+  const renderTemplateContent = (templateName: string) => {
+    const keyPrefix = templateName.replace(/\s/g, "-").toLowerCase();
 
     const section = (title: string, headings: string[]) => (
       <div className="w-full select-none not-prose h-full">
@@ -51,55 +96,19 @@ const NoteTemplateSection = () => {
       </div>
     );
 
-    switch (template) {
-      case "Customer discovery":
-        return section("Upstart Health intro call", [
-          "About them",
-          "Key takeaways",
-          "Decision-making-insights",
-          "Budget & timeline",
-          "Next steps",
-        ]);
-      case "1 on 1":
-        return section("Casey <> Rahul 1 on 1", [
-          "What's the latest",
-          "Feedback for them",
-          "Feedback for me",
-          "Next Milestone",
-        ]);
-      case "User Interview":
-        return section("Kallo - User interview", [
-          "Goals and motivations",
-          "Pain points",
-          "Current solutions",
-          "User thoughts",
-          "User suggestions",
-        ]);
-      case "Pitch":
-        return section("LunaLogic / Quantum Ventures", [
-          "Team",
-          "Problem",
-          "Product",
-          "Go-to-market",
-          "Traction",
-          "Fundraising",
-        ]);
-      case "Standup":
-        return section("Team standup", [
-          "Done yesterday",
-          "Doing today",
-          "Blockers",
-          "Kudos",
-        ]);
-      default:
-        return (
-          <div className="w-full select-none not-prose h-full">
-            <h2 className="text-lg font-semibold sm:text-xl lg:text-2xl">
-              Default Template
-            </h2>
-            <p>No template selected</p>
-          </div>
-        );
+    const templateContent = templatesData[templateName];
+
+    if (templateContent) {
+      return section(templateContent.title, templateContent.headings);
+    } else {
+      return (
+        <div className="w-full select-none not-prose h-full">
+          <h2 className="text-lg font-semibold sm:text-xl lg:text-2xl">
+            Default Template
+          </h2>
+          <p>No template selected</p>
+        </div>
+      );
     }
   };
 
@@ -126,7 +135,7 @@ const NoteTemplateSection = () => {
           className="flex-wrap flex-none gap-1 justify-center my-8 w-full max-w-md md:max-w-sm md:justify-start hidden md:flex"
           aria-label="Choose note template"
         >
-          {templates.map((template) => (
+          {templateNames.map((template) => (
             <button
               key={template}
               role="tab"
@@ -164,7 +173,7 @@ const NoteTemplateSection = () => {
           className="flex flex-wrap justify-center gap-2 mt-6 md:hidden"
           aria-label="Choose note template (mobile)"
         >
-          {templates.map((template) => (
+          {templateNames.map((template) => (
             <button
               key={template}
               role="tab"
