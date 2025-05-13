@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
 import MeetingPlatformsSection from "@/components/MeetingPlatformsSection";
 import GradientSectionWrapper from "@/components/GradientSectionWrapper";
+import FeatureSection from "@/components/FeatureSection";
 // import TrustedBySection from "@/components/TrustedBySection";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <MeetingPlatformsSection />
       <GradientSectionWrapper />
       {/* <BuiltForPeople /> */}
+      <FeatureSection />
     </main>
   );
 }
