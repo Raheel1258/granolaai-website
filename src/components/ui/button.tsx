@@ -1,6 +1,6 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
   "rounded-full font-medium cursor-pointer transition-colors duration-200",
@@ -15,11 +15,12 @@ const buttonVariants = cva(
         default: "px-[12px] py-[6px]",
         sm: "px-3 py-1",
         lg: "px-6 py-3",
+        xl: "px-9 py-5",
       },
       fullWidth: {
         true: "w-full",
         false: "w-auto",
-      }
+      },
     },
     defaultVariants: {
       variant: "default",
@@ -27,12 +28,12 @@ const buttonVariants = cva(
       fullWidth: false,
     },
   }
-)
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -43,9 +44,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       />
-    )
+    );
   }
-)
-Button.displayName = "Button"
+);
+Button.displayName = "Button";
 
-export { Button, buttonVariants } 
+export { Button, buttonVariants };
