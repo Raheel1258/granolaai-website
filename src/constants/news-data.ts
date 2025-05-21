@@ -1,4 +1,4 @@
-import { NewsItemType } from "@/app/blog/type";
+import { NewsItemType } from "@/app/[locale]/blog/type";
 
 export const newsData: NewsItemType[] = [
   {

@@ -1,4 +1,4 @@
-import { ResourceItem } from "@/app/pricing/types";
+import { ResourceItem } from "@/app/[locale]/pricing/types";
 import { ResourceCard } from "./ResourceCard";
 
 export const ResourcesSection = ({

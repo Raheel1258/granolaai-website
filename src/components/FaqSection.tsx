@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FAQAccordionItem } from "./FaqAccordionItem";
-import { FAQItem } from "@/app/pricing/types";
+import { FAQItem } from "@/app/[locale]/pricing/types";
 
 export const FAQSection = ({ faqs }: { faqs: FAQItem[] }) => {
   const [openFaq, setOpenFaq] = useState<string | null>(null);

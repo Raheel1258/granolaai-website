@@ -1,0 +1,42 @@
+{
+  "common": {
+    "welcome": "Welcome to NestQ Notes",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "features": "Features",
+    "pricing": "Pricing",
+    "contact": "Contact"
+  },
+  "navigation": {
+    "platform": "Platform",
+    "pricing": "Pricing",
+    "security": "Security",
+    "bookDemo": "Book a Demo",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© NestQ inc 2025",
+    "madeIn": "Made with ♥︎ in Canada"
+  },
+  "home": {
+    "hero": {
+      "title": "Your Personal Note-Taking Assistant",
+      "subtitle": "Organize your thoughts, boost your productivity",
+      "description": "NestQ Notes helps you capture, organize, and share your ideas effortlessly."
+    },
+    "features": {
+      "title": "Why Choose NestQ Notes?",
+      "feature1": {
+        "title": "Smart Organization",
+        "description": "Automatically categorize and organize your notes"
+      },
+      "feature2": {
+        "title": "Easy Sharing",
+        "description": "Share your notes with team members instantly"
+      },
+      "feature3": {
+        "title": "Secure Storage",
+        "description": "Your notes are encrypted and securely stored"
+      }
+    }
+  }
+} 
