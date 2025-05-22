@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import SkeletonListLoader from "./SkeletonListLoader";
 
 const NoteTemplateSection = () => {
-  const [activeTab, setActiveTab] = useState("Customer discovery");
-  const [version, setVersion] = useState(0);
-
   const templatesData: Record<string, { title: string; headings: string[] }> = {
     "Client Meeting": {
       title: "Client Meeting",
@@ -58,6 +55,8 @@ const NoteTemplateSection = () => {
     }
   };
   const templateNames = Object.keys(templatesData);
+  const [activeTab, setActiveTab] = useState(templateNames[0]);
+  const [version, setVersion] = useState(0);
 
   const renderTemplateContent = (templateName: string) => {
     const keyPrefix = templateName.replace(/\s/g, "-").toLowerCase();
