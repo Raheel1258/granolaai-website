@@ -7,18 +7,20 @@ import { Button } from "./ui/button";
 import { Calendar, CircleX, Clock, StepForwardIcon } from "lucide-react";
 import Link from "next/link";
 import FeatureProperty from "./FeatureProperty";
+import { useTranslations } from "next-intl";
 
 const FeatureSection = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const t = useTranslations("featureSection");
 
   return (
     <section className="flex flex-col items-center w-full xl:px-[2.5rem] px-[1.5rem] xl:py-[7rem] py-[2.5rem]">
       <div className="flex flex-col items-center max-w-[51.5rem] xl:mb-[4.5rem] mb-[3rem]">
         <h2 className="xl:text-[3rem] text-[2.5rem] text-center mb-[1rem] font-bold text-black">
-          Incredible Features
+          {t("title")}
         </h2>
         <p className="text-black xl:text-[1.25rem] text-[1rem]">
-          AI solutions designed for advisers
+          {t("subtitle")}
         </p>
       </div>
 
@@ -43,7 +45,7 @@ const FeatureSection = () => {
           <div className="w-full rounded-[1.125rem] hidden md:block">
             <Image
               src={features[activeIndex].image}
-              alt={features[activeIndex].title}
+              alt={features[activeIndex].textKey}
               width={600}
               height={400}
               className="w-full h-full rounded-[1.125rem] object-contain"
@@ -57,19 +59,19 @@ const FeatureSection = () => {
                   className="flex justify-center gap-[10px] w-full"
                   size="xl"
                 >
-                  Try it for free <StepForwardIcon />
+                  {t("tryFree")} <StepForwardIcon />
                 </Button>
               </Link>
               <Link href="https://calendly.com/abdennouraissaoui/meeting-with-abdennour" className="w-full md:w-auto">
                 <Button size="xl" className="flex justify-center gap-[10px] w-full">
-                  Schedule demo <StepForwardIcon />
+                  {t("scheduleDemo")} <StepForwardIcon />
                 </Button>
               </Link>
             </div>
             <div className="flex md:justify-start justify-center flex-wrap gap-[1.5rem]">
-              <FeatureProperty icon={<Clock />} text="Free 21 day trial" />
-              <FeatureProperty icon={<Calendar />} text="Set up in 5 mins" />
-              <FeatureProperty icon={<CircleX />} text="Cancel anytime" />
+              <FeatureProperty icon={<Clock />} text={t("properties.trial")} />
+              <FeatureProperty icon={<Calendar />} text={t("properties.setup")} />
+              <FeatureProperty icon={<CircleX />} text={t("properties.cancel")} />
             </div>
           </div>
         </div>

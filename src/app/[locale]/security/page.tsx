@@ -8,7 +8,7 @@ import React from "react";
 export default function SecurityPage() {
   return (
     <main className="flex-1 w-full lg:mx-auto">
-      <section className="flex flex-col gap-16 px-4 py-48 mx-auto w-full w-screen max-w-6xl antialiased md:gap-16 lg:gap-24">
+      <section className="flex flex-col gap-16 px-4 py-48 mx-auto w-full max-w-6xl antialiased md:gap-16 lg:gap-24">
         <div
           className="overflow-visible absolute inset-0 select-none z-[-1] opacity-60 rotate-180"
           style={{

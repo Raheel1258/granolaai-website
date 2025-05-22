@@ -1,55 +1,35 @@
-// import Image from "next/image";
+"use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const MeetingToWork: React.FC = () => {
+  const t = useTranslations("meetingToWork");
+
   return (
     <section className="relative flex flex-col items-center px-4 py-16 w-full max-w-3xl sm:px-6 md:py-24 lg:py-20 lg:px-8 lg:max-w-6xl overflow-visible gap-4 lg:gap-8">
       <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8">
         <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
-          Put your meetings to work
+          {t("title")}
         </h2>
         <p className="text-xl font-medium lg:text-2xl text-colored-secondary">
-          NestQ has the latest AI models built in, so it can help you do your
-          post-meeting action items
+          {t("subtitle")}
         </p>
       </div>
       <div className="relative mt-4 w-full cursor-default select-none">
         <ul className="flex flex-wrap gap-1 justify-center w-full">
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            What are my action items?
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            What were the client&apos;s main goals?
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            Did we decide on the strategy?
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            What investment amount was discussed?
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            Which retirement plans were mentioned?
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            When is our next client meeting?
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            Show client&apos;s risk profile updates.
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            List documents needed from client.
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            Did we talk about estate planning?
-          </li>
-          <li className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none">
-            Summarize the client&apos;s key questions.
-          </li>
+          {t.raw("questions").map((question: string, index: number) => (
+            <li
+              key={index}
+              className="px-2 py-1 text-[12px] text-white rounded-full md:px-4 md:py-2 md:text-xl bg-black/30 cursor-default select-none"
+            >
+              {question}
+            </li>
+          ))}
         </ul>
         <div className="flex absolute top-1/2 left-1/2 items-center p-4 w-[90%] md:w-full md:max-w-lg h-12 rounded-lg shadow-xl backdrop-blur-lg -translate-x-1/2 -translate-y-1/2 md:h-16 bg-white/90 cursor-default select-none">
           <div className="w-0.5 h-7 inline-block rounded-full bg-accent opacity-100 md:w-[3px] md:h-9"></div>
           <p className="w-full text-base tracking-wide opacity-90 md:text-xl text-tertiary font-basic">
-            Ask about meeting
+            {t("askAboutMeeting")}
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"

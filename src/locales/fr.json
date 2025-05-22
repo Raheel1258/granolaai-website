@@ -17,26 +17,173 @@
     "copyright": "© NestQ inc 2025",
     "madeIn": "Fabriqué avec ♥︎ au Canada"
   },
-  "home": {
-    "hero": {
-      "title": "Votre Assistant de Prise de Notes Personnel",
-      "subtitle": "Organisez vos pensées, boostez votre productivité",
-      "description": "NestQ Notes vous aide à capturer, organiser et partager vos idées en toute simplicité."
+  "heroSection": {
+    "the": "L'",
+    "assistant": "Assistant de réunion IA",
+    "finicial": "pour les conseillers financiers",
+    "description": "NestQ transforme les conversations clients en tâches, notes et dossiers de conformité grâce à une IA sécurisée",
+    "getStarted": "Essayez gratuitement",
+    "yourNotes": "Vos notes + transcription",
+    "AI": "AI notepad",
+    "worked": "Fonctionne sur toutes les plateformes"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "firstCard": {
+      "prefix": "Granola est comme Apple Notes, mais il",
+      "highlight": "transcrit",
+      "suffix": "votre réunion"
     },
-    "features": {
-      "title": "Pourquoi Choisir NestQ Notes ?",
-      "feature1": {
-        "title": "Organisation Intelligente",
-        "description": "Catégorisez et organisez automatiquement vos notes"
+    "secondCard": {
+      "prefix": "À la fin de la réunion, Granola",
+      "highlight": "améliore",
+      "suffix": "les notes que vous avez prises",
+      "growingg": "grandissent",
+      "mannual": "Utiliser tuesday.ai, v manuel",
+      "priority" : "une priorité pour q2"
+    },
+    "testimonial": {
+      "quote": "Granola est devenu indispensable - j'ai l'impression de vivre dans le futur.",
+      "name": "John Borthwick",
+      "title": "Investisseur, Betaworks"
+    }
+  },
+  "noteTemplates": {
+    "title": "Modèles personnalisables pour vos types de réunions les plus courants",
+    "subtitle": "Obtenez des notes dans le format exact dont votre équipe a besoin.",
+    "ariaLabels": {
+      "chooseTemplate": "Choisir un modèle de note",
+      "chooseTemplateMobile": "Choisir un modèle de note (mobile)"
+    },
+    "templates": {
+      "clientMeeting": "Réunion Client",
+      "generalMeeting": "Réunion Générale",
+      "planReview": "Révision du Plan",
+      "onboarding": "Intégration / Découverte",
+      "planningMeeting": "Réunion de Planification"
+    },
+    "headings": {
+      "meetingSummary": "Résumé de la Réunion",
+      "generalMeetingSummary": "Résumé de la Réunion Générale",
+      "followUpTasks": "Tâches de Suivi",
+      "clientTalkingPoints": "Points Clés du Client",
+      "accountActions": "Actions sur le Compte",
+      "summaryByTopics": "Résumé par Thèmes",
+      "conversationTimeline": "Chronologie de la Conversation",
+      "accountsToBeOpened": "Comptes à Ouvrir",
+      "financialFacts": "Faits Financiers Capturés",
+      "structuredDataPoints": "Points de Données Structurés"
+    },
+    "metadata": {
+      "time": "Aujourd'hui 16:00",
+      "participants": "Jim, Michaela +5"
+    },
+    "defaultTemplate": {
+      "title": "Modèle par Défaut",
+      "noTemplate": "Aucun modèle sélectionné"
+    }
+  },
+  "meetingToWork": {
+    "title": "Faites travailler vos réunions",
+    "subtitle": "NestQ intègre les derniers modèles d'IA pour vous aider à gérer vos tâches post-réunion",
+    "askAboutMeeting": "Poser une question sur la réunion",
+    "questions": [
+      "Quelles sont mes tâches à effectuer ?",
+      "Quels étaient les objectifs principaux du client ?",
+      "Avons-nous décidé de la stratégie ?",
+      "Quel montant d'investissement a été discuté ?",
+      "Quels plans de retraite ont été mentionnés ?",
+      "Quand est notre prochaine réunion client ?",
+      "Afficher les mises à jour du profil de risque du client.",
+      "Lister les documents nécessaires du client.",
+      "Avons-nous parlé de planification successorale ?",
+      "Résumer les questions clés du client."
+    ]
+  },
+  "benefitsSection": {
+    "title": "Tout change avec NestQ.",
+    "subtitle": "Plus qu'un gain de temps : obtenez la tranquillité d'esprit, améliorez l'expérience client et préparez l'avenir de votre cabinet.",
+    "benefits": {
+      "clientExperience": {
+        "title": "Offrez une expérience client exceptionnelle",
+        "benefits": {
+          "present": "Soyez pleinement présent dans chaque conversation client.",
+          "slipThrough": "Ne laissez rien passer entre les mailles du filet"
+        }
       },
-      "feature2": {
-        "title": "Partage Facile",
-        "description": "Partagez vos notes avec les membres de l'équipe instantanément"
+      "focusOnClients": {
+        "title": "Concentrez-vous sur les clients, pas sur l'administration",
+        "benefits": {
+          "followUp": "Rédigez les emails de suivi client en quelques secondes.",
+          "prep": "Préparez chaque réunion avec une fiche IA"
+        }
       },
-      "feature3": {
-        "title": "Stockage Sécurisé",
-        "description": "Vos notes sont cryptées et stockées en toute sécurité"
+      "compliance": {
+        "title": "Restez conforme",
+        "benefits": {
+          "audit": "Notes prêtes pour l'audit pour chaque réunion.",
+          "confidential": "Vos données sont confidentielles—jamais utilisées pour l'entraînement des modèles d'IA."
+        }
+      },
+      "futureProof": {
+        "title": "Préparez votre cabinet pour l'avenir avec l'IA",
+        "benefits": {
+          "features": "Nous publions de nouvelles fonctionnalités quotidiennement"
+        }
       }
     }
+  },
+  "featureSection": {
+    "title": "Fonctionnalités Incroyables",
+    "subtitle": "Solutions d'IA conçues pour les conseillers",
+    "tryFree": "Essayez gratuitement",
+    "scheduleDemo": "Planifier une démo",
+    "properties": {
+      "trial": "Essai gratuit de 21 jours",
+      "setup": "Configuration en 5 minutes",
+      "cancel": "Annulation à tout moment"
+    },
+    "features": {
+      "fileNoteTemplates": {
+        "title": "Modèles de Notes",
+        "text": "Accédez à des modèles spécialisés pour différents types de réunions, y compris les révisions, les découvertes, les SOA et les sessions stratégiques."
+      },
+      "clientSummaryEmail": {
+        "title": "Email de Résumé Client",
+        "text": "Créez des emails de résumé professionnels avec les points clés de discussion et les actions à entreprendre, prêts à être envoyés en un clic."
+      },
+      "fullMeetingTranscript": {
+        "title": "Transcription Complète",
+        "text": "Capturez chaque détail avec des transcriptions complètes de vos réunions clients enregistrées."
+      },
+      "notesToParaplanner": {
+        "title": "Notes pour le Paraplanner",
+        "text": "Générez des formulaires de demande pré-remplis pour votre paraplanner directement depuis vos réunions stratégiques, optimisant votre processus SOA."
+      },
+      "automatedLetter": {
+        "title": "Lettre d'Engagement Automatisée",
+        "text": "Créez facilement des lettres d'engagement prêtes pour le client, pré-remplies avec les informations recueillies lors des réunions de découverte."
+      },
+      "clientMindMap": {
+        "title": "Carte Mentale Client",
+        "text": "Générez des cartes mentales client complètes à partir de vos réunions de découverte, fournissant des informations précieuses pour construire des relations solides."
+      },
+      "customisationOptions": {
+        "title": "Options de Personnalisation",
+        "text": "Configurez et personnalisez la sortie de vos documents pour correspondre parfaitement à votre marque et à vos besoins professionnels."
+      }
+    }
+  },
+  "footer": {
+    "getStarted": {
+      "title": "Commencez gratuitement en moins de 10 minutes",
+      "description": "Commencez avec un essai gratuit de 30 jours. Vous aurez un accès complet à la plateforme NestQ, avec l'aide de notre équipe, pour vous assurer de tirer le meilleur parti de votre expérience."
+    },
+    "buttons": {
+      "bookDemo": "Réserver une Démo",
+      "tryFree": "Essayez gratuitement"
+    },
+    "copyright": "© NestQ inc 2025",
+    "madeIn": "Fabriqué avec ♥︎ au Canada"
   }
 } 

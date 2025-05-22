@@ -1,11 +1,16 @@
+'use client';
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const MeetingPlatformsSection = () => {
+
+  const t = useTranslations("heroSection");
+
   return (
     <section className="flex overflow-visible relative flex-col items-center px-4 py-16 w-full max-w-3xl sm:px-6 md:py-24 lg:py-20 lg:px-8 lg:max-w-6xl gap-4 lg:gap-8">
       <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8">
         <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
-          Works on all platforms
+          {t("worked")}
         </h2>
       </div>
 

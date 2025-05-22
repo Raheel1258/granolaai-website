@@ -11,11 +11,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { LanguageSwitcher } from "./LanguageSwither";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const locale = useLocale();
 
   const t = useTranslations("navigation");
 
@@ -34,7 +35,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex justify-center fixed sm:top-[20px] top-0 z-50">
       <header
-        className={`w-full sm:max-w-[620.86px] sm:rounded-full h-[56px] flex items-center justify-between p-[8px] relative ${
+        className={`w-full sm:max-w-[680px] sm:rounded-full h-[56px] flex items-center justify-between p-[8px] relative ${
           isScrolled && !isMenuOpen
             ? "shadow-lg bg-[#f5f6f7]"
             : "sm:border bg-white"
@@ -51,13 +52,13 @@ const Navbar = () => {
         </Link>
         <nav className="sm:flex hidden">
           <ul className="flex items-center w-full">
-            {navbarLinks.map((link, index: number) => (
+            {navbarLinks.map((link: any, index: number) => (
               <Link
                 key={index}
-                href={link.path}
+                href={`/${locale}/${link.path}`}
                 className="px-[12px] py-[6px] rounded-full hover:bg-black/5"
               >
-                {link.name}
+                {locale === "fr" ? link.nameFr : link.name}
               </Link>
             ))}
           </ul>
@@ -112,7 +113,7 @@ const Navbar = () => {
                 className="w-full text-right text-5xl px-4 py-2 rounded-md hover:bg-black/5"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {link.name}
+                {locale === "fr" ? link.nameFr : link.name}
               </Link>
             ))}
           </div>
@@ -120,7 +121,7 @@ const Navbar = () => {
             <div className="flex flex-wrap text-right gap-x-4 justify-end">
               {footerLinks.map((link: any, index: number) => (
                 <Link key={index} href={link.path} className="hover:underline">
-                  {link.name}
+                  {locale === "fr" ? link.nameFr : link.name}
                 </Link>
               ))}
               <Link href="" className="flex items-center justify-center">
@@ -139,11 +140,11 @@ const Navbar = () => {
               <LanguageSwitcher />
             </div>
             <div className="flex flex-col items-end gap-2">
-              <p>© NestQ inc 2025</p>
-              <p>Made with ♥︎ in Canada</p>
+              <p>{t("copyright")}</p>
+              <p>{t("madeIn")}</p>
               {otherFooterLinks.map((link, index: number) => (
                 <Link key={index} href={link.path} className="hover:underline">
-                  {link.name}
+                  {locale === "fr" ? link.nameFr : link.name}
                 </Link>
               ))}
             </div>

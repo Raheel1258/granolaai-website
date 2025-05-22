@@ -30,7 +30,7 @@ export default function RootLayoutWrapper({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  return <RootLayoutAsync children={children} params={params} />;
+  return <RootLayoutAsync params={params}>{children}</RootLayoutAsync>;
 }
 
 async function RootLayoutAsync({
@@ -40,6 +40,7 @@ async function RootLayoutAsync({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+
   const locale = params.locale;
 
   if (!locales.includes(locale as any)) {

@@ -17,26 +17,173 @@
     "copyright": "© NestQ inc 2025",
     "madeIn": "Made with ♥︎ in Canada"
   },
-  "home": {
-    "hero": {
-      "title": "Your Personal Note-Taking Assistant",
-      "subtitle": "Organize your thoughts, boost your productivity",
-      "description": "NestQ Notes helps you capture, organize, and share your ideas effortlessly."
+  "heroSection": {
+    "the": "The",
+    "assistant": "AI Meeting Assistant",
+    "finicial": "for Financial Advisors",
+    "description": "NestQ turns client conversations into tasks, notes, and compliance records with secure AI",
+    "getStarted": "Try for Free",
+    "yourNotes": "Your notes + transcript",
+    "AI": "AI enhanced",
+    "worked": "Works on all platforms"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "firstCard": {
+      "prefix": "Granola is like Apple Notes, but it also",
+      "highlight": "transcribes",
+      "suffix": "your meeting"
     },
-    "features": {
-      "title": "Why Choose NestQ Notes?",
-      "feature1": {
-        "title": "Smart Organization",
-        "description": "Automatically categorize and organize your notes"
+    "secondCard": {
+      "prefix": "When the meeting ends, Granola",
+      "highlight": "enhances",
+      "suffix": "the notes you've written",
+      "growingg": "growing",
+      "mannual": "Use tuesday.ai, v manual",
+      "priority" : "a priority for q2"
+    },
+    "testimonial": {
+      "quote": "Granola has become indispensable - feels like I'm living in the future.",
+      "name": "John Borthwick",
+      "title": "Investor, Betaworks"
+    }
+  },
+  "noteTemplates": {
+    "title": "Customizable templates for your most common meeting types",
+    "subtitle": "Get notes in the exact format your team needs.",
+    "ariaLabels": {
+      "chooseTemplate": "Choose note template",
+      "chooseTemplateMobile": "Choose note template (mobile)"
+    },
+    "templates": {
+      "clientMeeting": "Client Meeting",
+      "generalMeeting": "General Meeting",
+      "planReview": "Plan Review",
+      "onboarding": "Onboarding / Discovery",
+      "planningMeeting": "Planning Meeting"
+    },
+    "headings": {
+      "meetingSummary": "Meeting Summary",
+      "generalMeetingSummary": "General Meeting Summary",
+      "followUpTasks": "Follow-Up Tasks",
+      "clientTalkingPoints": "Client's Talking Points",
+      "accountActions": "Account Actions",
+      "summaryByTopics": "Summary By Topics",
+      "conversationTimeline": "Conversation Timeline",
+      "accountsToBeOpened": "Accounts To Be Opened",
+      "financialFacts": "Financial Facts Captured",
+      "structuredDataPoints": "Structured Data Points"
+    },
+    "metadata": {
+      "time": "Today 4:00 PM",
+      "participants": "Jim, Michaela +5"
+    },
+    "defaultTemplate": {
+      "title": "Default Template",
+      "noTemplate": "No template selected"
+    }
+  },
+  "meetingToWork": {
+    "title": "Put your meetings to work",
+    "subtitle": "NestQ has the latest AI models built in, so it can help you do your post-meeting action items",
+    "askAboutMeeting": "Ask about meeting",
+    "questions": [
+      "What are my action items?",
+      "What were the client's main goals?",
+      "Did we decide on the strategy?",
+      "What investment amount was discussed?",
+      "Which retirement plans were mentioned?",
+      "When is our next client meeting?",
+      "Show client's risk profile updates.",
+      "List documents needed from client.",
+      "Did we talk about estate planning?",
+      "Summarize the client's key questions."
+    ]
+  },
+  "benefitsSection": {
+    "title": "Everything changes with NestQ.",
+    "subtitle": "More than time saved: Gain peace of mind, elevate client experiences, and future-proof your practice.",
+    "benefits": {
+      "clientExperience": {
+        "title": "Deliver Exceptional Client Experiences",
+        "benefits": {
+          "present": "Be fully present in every client conversation.",
+          "slipThrough": "Never let anything slip through the cracks"
+        }
       },
-      "feature2": {
-        "title": "Easy Sharing",
-        "description": "Share your notes with team members instantly"
+      "focusOnClients": {
+        "title": "Focus on Clients, Not Tedious Admin",
+        "benefits": {
+          "followUp": "Get client follow-up emails drafted in seconds.",
+          "prep": "Prep with an AI one-pager for every meeting"
+        }
       },
-      "feature3": {
-        "title": "Secure Storage",
-        "description": "Your notes are encrypted and securely stored"
+      "compliance": {
+        "title": "Stay compliant",
+        "benefits": {
+          "audit": "Audit-ready notes for every meeting.",
+          "confidential": "Your data is confidential—never used for AI model training."
+        }
+      },
+      "futureProof": {
+        "title": "AI future-proof your firm",
+        "benefits": {
+          "features": "We release new features daily"
+        }
       }
     }
+  },
+  "featureSection": {
+    "title": "Incredible Features",
+    "subtitle": "AI solutions designed for advisers",
+    "tryFree": "Try it for free",
+    "scheduleDemo": "Schedule demo",
+    "properties": {
+      "trial": "Free 21 day trial",
+      "setup": "Set up in 5 mins",
+      "cancel": "Cancel anytime"
+    },
+    "features": {
+      "fileNoteTemplates": {
+        "title": "File Note Templates",
+        "text": "Access specialised templates for various meeting types, including Reviews, Discoveries, SOAs, and Strategy sessions."
+      },
+      "clientSummaryEmail": {
+        "title": "Client Summary Email",
+        "text": "Create professional summary emails with key discussion points and action items, ready to send with a single click."
+      },
+      "fullMeetingTranscript": {
+        "title": "Full Meeting Transcript",
+        "text": "Capture every detail with complete transcripts of your recorded client meetings."
+      },
+      "notesToParaplanner": {
+        "title": "Notes to Paraplanner",
+        "text": "Generate pre-populated request forms for your paraplanner directly from your strategy meetings, streamlining your SOA process."
+      },
+      "automatedLetter": {
+        "title": "Automated Letter of Engagement",
+        "text": "Effortlessly create client-ready engagement letters, pre-filled with information gathered during discovery meetings."
+      },
+      "clientMindMap": {
+        "title": "Client Mind Map",
+        "text": "Generate comprehensive client mind maps from your discovery meetings, providing valuable insights for building strong relationships."
+      },
+      "customisationOptions": {
+        "title": "Customisation Options",
+        "text": "Configure and personalise the output of your documents to perfectly match your brand and business needs."
+      }
+    }
+  },
+  "footer": {
+    "getStarted": {
+      "title": "Get started for free in less than 10 minutes",
+      "description": "Get started with a 30 day free trial. You'll have full access to the NestQ platform, with help from our team, to make sure you get the most out of your experience."
+    },
+    "buttons": {
+      "bookDemo": "Book a Demo",
+      "tryFree": "Try for free"
+    },
+    "copyright": "© NestQ inc 2025",
+    "madeIn": "Made with ♥︎ in Canada"
   }
-} 
+}

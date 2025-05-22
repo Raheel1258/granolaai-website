@@ -1,63 +1,36 @@
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
-type Feature = {
-  title: string;
-  text: string;
-  image: string;
-};
-
-type FeatureListItemProps = {
-  feature: Feature;
-  isActive: boolean;
+interface FeatureListItemProps {
+  feature: {
+    titleKey: string;
+    textKey: string;
+    image: string;
+  };
   className?: string;
+  isActive: boolean;
   onClick: () => void;
-};
+}
 
-const FeatureListItem: React.FC<FeatureListItemProps> = ({
+const FeatureListItem = ({
   feature,
+  className,
   isActive,
   onClick,
-  className,
-}) => {
+}: FeatureListItemProps) => {
+  const t = useTranslations("featureSection");
+
   return (
     <div
-      className={cn(
-        "w-full p-[1rem] flex items-start gap-[2rem] flex-shrink-0 cursor-pointer",
-        className
-      )}
+      className={`p-4 cursor-pointer transition-all duration-300 ${
+        isActive ? "bg-[#F8F8FF]" : "hover:bg-[#F8F8FF]"
+      } ${className}`}
       onClick={onClick}
     >
-      {isActive ? (
-        <div className="w-[0.5rem] h-full min-h-[116px] bg-[#93f27e] rounded-[1.875rem] hidden md:block" />
-      ) : (
-        <div className="w-[0.5rem] h-[1rem] bg-transparent rounded-[1.875rem] hidden md:block" />
-      )}
-
-      <div className="flex flex-col">
-        {isActive && (
-          <div className="w-full h-[0.5rem] bg-[#93f27e] rounded-[1.875rem] block md:hidden mb-[10px]" />
-        )}
-        <h5 className="text-[1.25rem] font-medium mb-[0.5rem] text-black">
-          {feature.title}
-        </h5>
-
-        {isActive && (
-          <p className="text-[#4E506A] slide-down-fade mb-[30px] md:mb-0">
-            {feature.text}
-          </p>
-        )}
-        {isActive && (
-          <Image
-            src={feature.image}
-            alt="feature image"
-            width={288.9}
-            height={269.23}
-            className="md:hidden block object-contain w-[288.9px] h-[269.23px] rounded-[1.125rem] self-center"
-          />
-        )}
-      </div>
+      <h3 className="text-[1.25rem] font-semibold mb-2">{t(feature.titleKey)}</h3>
+      <p className="text-[0.875rem] text-gray-600">{t(feature.textKey)}</p>
     </div>
   );
 };

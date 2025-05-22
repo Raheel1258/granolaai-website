@@ -8,33 +8,33 @@ import {
 export const benefitsData = [
   {
     icon: <ThumbsUpIcon className="w-8 h-8 text-blue" />,
-    title: "Deliver Exceptional Client Experiences",
+    titleKey: "clientExperience.title",
     benefits: [
-      "Be fully present in every client conversation.",
-      "Never let anything slip through the cracks",
+      "clientExperience.benefits.present",
+      "clientExperience.benefits.slipThrough",
     ],
   },
   {
     icon: <UserIcon className="w-8 h-8 text-purple" />,
-    title: "Focus on Clients, Not Tedious Admin",
+    titleKey: "focusOnClients.title",
     benefits: [
-      "Get client follow-up emails drafted in seconds.",
-      "Prep with an AI one-pager for every meeting",
+      "focusOnClients.benefits.followUp",
+      "focusOnClients.benefits.prep",
     ],
   },
   {
     icon: <CheckBadgeIcon className="w-8 h-8 text-green" />,
-    title: "Stay compliant",
+    titleKey: "compliance.title",
     benefits: [
-      "Audit-ready notes for every meeting.",
-      "Your data is confidential—never used for AI model training.",
+      "compliance.benefits.audit",
+      "compliance.benefits.confidential",
     ],
   },
   {
     icon: <SparklesIcon className="w-8 h-8 text-yellow" />,
-    title: "AI future-proof your firm",
+    titleKey: "futureProof.title",
     benefits: [
-      "We release new features daily",
+      "futureProof.benefits.features",
     ],
   },
 ];
