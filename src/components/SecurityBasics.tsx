@@ -1,85 +1,83 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { calendlyLink } from "@/constants/nav-links";
 
 export const SecurityBasics = () => {
+  const t = useTranslations('security.basics');
+
   return (
     <>
-      <h2 className="text-colored">How NestQ Works with Your Meetings</h2>
+      <h2 className="text-colored">{t('howItWorks.title')}</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          NestQ offers flexible options for capturing client conversations:
+          {t('howItWorks.captureOptions.title')}
           <ul className="list-circle pl-6 mt-2 space-y-1">
             <li>
-              <strong>Web App:</strong> Use in your browser for in-person meeting notes, to record unscheduled calls, or connect to your calendar for scheduled virtual meetings.
+              <strong>{t('howItWorks.captureOptions.webApp.title')}</strong> {t('howItWorks.captureOptions.webApp.description')}
             </li>
             <li>
-              <strong>Phone App:</strong> Ideal for capturing in-person meeting details on the go.
+              <strong>{t('howItWorks.captureOptions.phoneApp.title')}</strong> {t('howItWorks.captureOptions.phoneApp.description')}
             </li>
           </ul>
         </li>
         <li>
-          <strong>Calendar Integration:</strong> NestQ seamlessly integrates with your calendar (e.g., Google, Outlook) to identify and prepare for your scheduled meetings.
+          <strong>{t('howItWorks.calendarIntegration.title')}</strong> {t('howItWorks.calendarIntegration.description')}
         </li>
         <li>
-          For virtual meetings, you have choices:
+          {t('howItWorks.virtualMeetings.title')}
           <ul className="list-circle pl-6 mt-2 space-y-1">
-            <li>Allow NestQ to automatically join as a participant (bot) using trusted third-party services like Recall.ai or Meeting Bass.</li>
-            <li>Manually activate recording via the NestQ web app during your meeting.</li>
+            {t.raw('howItWorks.virtualMeetings.options').map((option: string, index: number) => (
+              <li key={index}>{option}</li>
+            ))}
           </ul>
         </li>
+        <li>{t('howItWorks.compatibility')}</li>
+        <li>{t('howItWorks.aiPartners')}</li>
+      </ul>
+
+      <h2 className="mt-8 text-colored">{t('aiTraining.title')}</h2>
+      <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          NestQ is compatible with all major meeting platforms, including Zoom, Google Meet, and Microsoft Teams.
-        </li>
-        <li>
-          We partner with leading AI providers like OpenAI for intelligent summarization and utilize high-quality transcription services to ensure accuracy.
+          <strong>{t('aiTraining.dataPrivacy.title')}</strong> {t('aiTraining.dataPrivacy.description')}
         </li>
       </ul>
 
-      <h2 className="mt-8 text-colored">AI Model Training & Your Data Privacy</h2>
+      <h2 className="mt-8 text-colored">{t('recordings.title')}</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          <strong>Your Data Stays Yours:</strong> We strictly prohibit third-party AI providers, such as OpenAI, from using your client data to train their general AI models. Your information is processed solely to provide NestQ&apos;s services to you.
+          <strong>{t('recordings.minimalHandling.title')}</strong> {t('recordings.minimalHandling.description')}
+        </li>
+        <li>{t('recordings.botAssisted')}</li>
+      </ul>
+
+      <h2 className="mt-8 text-colored">{t('dataControl.title')}</h2>
+      <ul className="list-disc pl-6 space-y-3 text-gray-400">
+        <li>
+          <strong>{t('dataControl.privacy.title')}</strong> {t('dataControl.privacy.description')}
+        </li>
+        <li>
+          <strong>{t('dataControl.retention.title')}</strong> {t('dataControl.retention.description')}
         </li>
       </ul>
 
-      <h2 className="mt-8 text-colored">Audio Recordings & Transcripts</h2>
+      <h2 className="mt-8 text-colored">{t('infrastructure.title')}</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          <strong>Minimal Audio Handling:</strong> NestQ is designed to minimize audio storage. Audio is captured only for transcription.
+          <strong>{t('infrastructure.storage.title')}</strong> {t('infrastructure.storage.description')}
         </li>
         <li>
-           When bot-assisted recording is used (via Recall.ai or Meeting Bass), these services handle initial audio capture and transcription per their strict security protocols. NestQ only receives and stores the final text transcript.
+          <strong>{t('infrastructure.backups.title')}</strong> {t('infrastructure.backups.description')}
+        </li>
+        <li>
+          <strong>{t('infrastructure.team.title')}</strong> {t('infrastructure.team.description')}
         </li>
       </ul>
 
-      <h2 className="mt-8 text-colored">You Control Your Data</h2>
+      <h2 className="mt-8 text-colored">{t('help.title')}</h2>
       <ul className="list-disc pl-6 space-y-3 text-gray-400">
         <li>
-          <strong>Privacy by Default:</strong> All your notes and transcripts are private by default. You decide if, when, and with whom to share them.
-        </li>
-        <li>
-          <strong>Full Retention & Deletion Control:</strong> You have complete authority over your data. Delete individual notes or request the deletion of your entire dataset at any time, in line with your firm&apos;s data retention policies.
-        </li>
-      </ul>
-
-      <h2 className="mt-8 text-colored">
-        Secure, Encrypted Infrastructure
-      </h2>
-      <ul className="list-disc pl-6 space-y-3 text-gray-400">
-        <li>
-          <strong>Encrypted Storage:</strong> Your transcripts and notes are stored in our Canada-hosted Azure Virtual Private Cloud, encrypted both at rest and in transit using industry-standard protocols.
-        </li>
-        <li>
-          <strong>Reliable Backups:</strong> Data is backed up daily to ensure integrity and availability.
-        </li>
-        <li>
-          <strong>Expert Engineering Team:</strong> NestQ is built and maintained by a top-tier engineering team with extensive experience creating secure, scalable infrastructure.
-        </li>
-      </ul>
-
-      <h2 className="mt-8 text-colored">We’re Here to Help</h2>
-      <ul className="list-disc pl-6 space-y-3 text-gray-400">
-        <li>
-          If you have more security questions, please {""}
+          {t('help.contact')} {""}
           <a
             className="underline underline-offset-2 decoration-tertiary hover:decoration-accent-strong hover:text-accent-strong"
             href={calendlyLink}

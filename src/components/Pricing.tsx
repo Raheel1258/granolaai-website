@@ -1,10 +1,53 @@
 "use client";
-import { CheckCircle, Plus } from "lucide-react";
-import { getPlansData } from "../constants/plans-data";
+import { CheckCircle, Plus, Monitor } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+interface Feature {
+  text: string;
+  highlight?: boolean;
+  icon?: string;
+}
+
+interface Plan {
+  name: string;
+  price: string;
+  period: string;
+  buttonText: string;
+  androidButton: string;
+  features: (string | Feature)[];
+}
 
 export default function Pricing() {
+  const t = useTranslations("pricingSection");
+  
   const billingPeriod = "monthly";
-  const plans = getPlansData(billingPeriod);
+
+  const plans: Plan[] = [
+    {
+      name: t("plans.freeTrial.name"),
+      price: t("plans.freeTrial.price"),
+      period: t("plans.freeTrial.period"),
+      buttonText: t("plans.freeTrial.buttonText"),
+      androidButton: t("plans.freeTrial.androidButton"),
+      features: t.raw("plans.freeTrial.features"),
+    },
+    {
+      name: t("plans.individual.name"),
+      price: t(`plans.individual.price.${billingPeriod}`),
+      period: t(`plans.individual.period.${billingPeriod}`),
+      buttonText: t("plans.individual.buttonText"),
+      androidButton: t("plans.individual.androidButton"),
+      features: t.raw("plans.individual.features"),
+    },
+    {
+      name: t("plans.business.name"),
+      price: t(`plans.business.price.${billingPeriod}`),
+      period: t(`plans.business.period.${billingPeriod}`),
+      buttonText: t("plans.business.buttonText"),
+      androidButton: t("plans.business.androidButton"),
+      features: t.raw("plans.business.features"),
+    },
+  ];
 
   return (
     <main className="flex-1 w-full lg:mx-auto">
@@ -21,13 +64,10 @@ export default function Pricing() {
       <section className="relative flex flex-col gap-16 items-center px-4 py-12 w-full sm:px-6 md:py-24 lg:gap-32 lg:py-20 lg:px-8 mx-auto mt-16 mb-16 max-w-xl md:grid-cols-1 sm:max-w-full lg:max-w-7xl">
         <div className="flex flex-col gap-4 items-center mx-auto max-w-5xl text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 tracking-tight leading-tight">
-            Help your whole
-            <br />
-            company work smarter
+            {t("title")}
           </h1>
           <p className="max-w-2xl text-xl font-medium text-gray-500">
-            With Granola, both teams and individuals can share knowledge more
-            easily, keeping on top of the things that matter
+            {t("subtitle")}
           </p>
         </div>
 
@@ -49,18 +89,10 @@ export default function Pricing() {
                   <div className="flex flex-col gap-2">
                     <div className="flex flex-col gap-2">
                       <button className="w-full flex items-center justify-center px-4 py-4 rounded-md shadow-sm bg-[#8DEE6C] text-black font-semibold text-sm font-medium hover:bg-[#8DEE6C] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                        {plan.name === "Free trial" ? (
+                        {plan.name === t("plans.freeTrial.name") ? (
                           <>
                             <span className="mr-2">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                              >
-                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
-                              </svg>
+                              <Monitor size={16} />
                             </span>
                             {plan.androidButton}
                           </>
@@ -74,7 +106,7 @@ export default function Pricing() {
               </div>
 
               <ul className="flex-1 p-4 py-4 space-y-3 w-full text-base md:px-5 md:pt-4 md:pb-6">
-                {plan.features.map((feature, j) => {
+                {plan.features.map((feature: string | Feature, j: number) => {
                   const featureText =
                     typeof feature === "string" ? feature : feature.text;
                   const isHighlighted =

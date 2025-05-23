@@ -1,45 +1,41 @@
 "use client";
 import { useState } from "react";
+import { useTranslations } from 'next-intl';
 
 export const SecurityFAQ = () => {
+  const t = useTranslations('security.faq');
+
   const securityQA = [
     {
-      question: "How does NestQ secure customer data?",
-      answer:
-        "NestQ employs industry-standard encryption protocols and security measures to protect customer data. All data is encrypted both in transit and at rest using AES-256 encryption. We regularly conduct security audits and follow secure development practices to ensure your data remains protected.",
+      question: t('dataSecurity.questions.security.question'),
+      answer: t('dataSecurity.questions.security.answer'),
     },
     {
-      question: "How can I report security vulnerabilities to NestQ?",
-      answer:
-        "You can report security vulnerabilities by emailing support@nestQ.ai. We operate a responsible disclosure program and work with security researchers to quickly address any reported issues.",
+      question: t('dataSecurity.questions.vulnerabilities.question'),
+      answer: t('dataSecurity.questions.vulnerabilities.answer'),
     },
     {
-      question: "Can I use a version of NestQ in a private cloud?",
-      answer:
-        "Yes, NestQ offers a private cloud deployment option for enterprise customers. This allows you to run NestQ in your own cloud environment with dedicated resources and infrastructure.",
+      question: t('dataSecurity.questions.privateCloud.question'),
+      answer: t('dataSecurity.questions.privateCloud.answer'),
     }
   ];
 
   const storageQA = [
     {
-      question: "What happens to my data if I delete my account?",
-      answer:
-        "When you delete your account, all your personal data is permanently removed from our systems immediately. Any anonymized aggregate statistics derived from your data may be retained but cannot be traced back to you.",
+      question: t('dataStorage.questions.accountDeletion.question'),
+      answer: t('dataStorage.questions.accountDeletion.answer'),
     },
     {
-      question: "Can I request a copy of all my data?",
-      answer:
-        "Yes, you can request a complete export of all your data at any time by contacting our support team. We'll provide your data in a machine-readable format within 72 hours of your request.",
+      question: t('dataStorage.questions.dataExport.question'),
+      answer: t('dataStorage.questions.dataExport.answer'),
     },
     {
-      question: "Does NestQ have a data backup policy?",
-      answer:
-        "Yes, NestQ maintains regular backups of all customer data.",
+      question: t('dataStorage.questions.backupPolicy.question'),
+      answer: t('dataStorage.questions.backupPolicy.answer'),
     },
     {
-      question: "What are your data retention policies?",
-      answer:
-        "By default, we retain your data for as long as you maintain an active account. Enterprise customers can configure custom retention policies to meet specific regulatory or internal requirements. Data is automatically removed according to these policies unless legal holds require otherwise.",
+      question: t('dataStorage.questions.retentionPolicies.question'),
+      answer: t('dataStorage.questions.retentionPolicies.answer'),
     },
   ];
 
@@ -47,7 +43,7 @@ export const SecurityFAQ = () => {
     <div className="col-span-full mt-8">
       <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8 mb-12">
         <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
-          Data Security
+          {t('dataSecurity.title')}
         </h2>
       </div>
 
@@ -71,7 +67,7 @@ export const SecurityFAQ = () => {
       <div className="col-span-full mt-8">
         <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8 mb-12">
           <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
-            Data Storage & Processing
+            {t('dataStorage.title')}
           </h2>
         </div>
 

@@ -185,5 +185,344 @@
     },
     "copyright": "© NestQ inc 2025",
     "madeIn": "Made with ♥︎ in Canada"
+  },
+  "pricingSection": {
+    "title": "Help your whole company work smarter",
+    "subtitle": "With NestQ, both teams and individuals can share knowledge more easily, keeping on top of the things that matter",
+    "plans": {
+      "freeTrial": {
+        "name": "Free trial",
+        "price": "Free",
+        "period": "",
+        "buttonText": "Get started",
+        "androidButton": "Join the Windows waitlist",
+        "features": [
+          "25 free meetings",
+          "AI chat with any meeting",
+          "Create your own note templates"
+        ]
+      },
+      "individual": {
+        "name": "Individual",
+        "price": {
+          "monthly": "$18",
+          "yearly": "$180"
+        },
+        "period": {
+          "monthly": "per month",
+          "yearly": "per year"
+        },
+        "buttonText": "Subscribe",
+        "androidButton": "Sign up in app",
+        "features": [
+          { "text": "Unlimited meetings for you", "highlight": true },
+          "AI chat with any meeting",
+          "Create your own note templates"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "price": {
+          "monthly": "$14",
+          "yearly": "$140"
+        },
+        "period": {
+          "monthly": "per user per month",
+          "yearly": "per user per year"
+        },
+        "buttonText": "Get started",
+        "androidButton": "Sign up in app",
+        "features": [
+          { "text": "Unlimited meetings for the whole team", "highlight": true },
+          "Share templates across your team",
+          "Consolidated billing & admin",
+          { "text": "Everything included in Individual", "icon": "plus" }
+        ]
+      }
+    }
+  },
+  "pricing": {
+    "enterprise": {
+      "title": "Enterprise",
+      "price": "Starts at $35",
+      "period": "per user per month",
+      "talkToUs": "Talk to us",
+      "learnMore": "Learn more",
+      "features": {
+        "optOut": "Opt out of model training for everyone in your team",
+        "adminControls": "Admin controls for meeting link sharing",
+        "prioritySupport": "Priority support and usage analytics",
+        "businessFeatures": "Everything included in Business"
+      }
+    },
+    "faq": {
+      "title": "Questions & answers",
+      "questions": {
+        "enterpriseVsBusiness": {
+          "question": "What's the difference between Enterprise and Business?",
+          "answer": "Enterprise includes additional features like opt-out of model training, admin controls for meeting link sharing, and priority support with usage analytics. It also includes all Business tier features."
+        },
+        "adminControls": {
+          "question": "What admin controls will I have?",
+          "answer": "Admin controls include managing meeting link sharing, user permissions, data retention policies, and usage monitoring across your organization."
+        },
+        "integrations": {
+          "question": "What are your integration capabilities?",
+          "answer": "Granola integrates with popular calendar apps, video conferencing platforms, and productivity tools to seamlessly fit into your workflow."
+        },
+        "modelTraining": {
+          "question": "Do you train any models on my data?",
+          "answer": "Enterprise customers can opt out of model training for everyone in their team, ensuring your data is never used to train our models."
+        },
+        "compliance": {
+          "question": "Is Granola SOC-2 / HIPAA compliant?",
+          "answer": "Yes, Granola is SOC-2 compliant and we offer HIPAA compliance options for Enterprise customers with additional data protection measures."
+        },
+        "sso": {
+          "question": "Does Granola have SSO?",
+          "answer": "Yes, Enterprise plans include Single Sign-On (SSO) support for streamlined and secure authentication."
+        },
+        "notifications": {
+          "question": "How do you notify other participants that Granola is being used?",
+          "answer": "Granola adds a discreet notification to meeting invites and at the start of meetings to inform participants that the meeting is being recorded and summarized."
+        },
+        "platforms": {
+          "question": "When will Granola be available on iOS, Windows, and Outlook?",
+          "answer": "We're currently developing native apps for iOS and Windows with Outlook integration. These are planned for release in the coming months."
+        }
+      },
+      "dataSecurity": {
+        "title": "Data Security",
+        "questions": {
+          "security": {
+            "question": "How does NestQ secure customer data?",
+            "answer": "NestQ employs industry-standard encryption protocols and security measures to protect customer data. All data is encrypted both in transit and at rest using AES-256 encryption. We regularly conduct security audits and follow secure development practices to ensure your data remains protected."
+          },
+          "vulnerabilities": {
+            "question": "How can I report security vulnerabilities to NestQ?",
+            "answer": "You can report security vulnerabilities by emailing support@nestQ.ai. We operate a responsible disclosure program and work with security researchers to quickly address any reported issues."
+          },
+          "privateCloud": {
+            "question": "Can I use a version of NestQ in a private cloud?",
+            "answer": "Yes, NestQ offers a private cloud deployment option for enterprise customers. This allows you to run NestQ in your own cloud environment with dedicated resources and infrastructure."
+          }
+        }
+      },
+      "dataStorage": {
+        "title": "Data Storage & Processing",
+        "questions": {
+          "accountDeletion": {
+            "question": "What happens to my data if I delete my account?",
+            "answer": "When you delete your account, all your personal data is permanently removed from our systems immediately. Any anonymized aggregate statistics derived from your data may be retained but cannot be traced back to you."
+          },
+          "dataExport": {
+            "question": "Can I request a copy of all my data?",
+            "answer": "Yes, you can request a complete export of all your data at any time by contacting our support team. We'll provide your data in a machine-readable format within 72 hours of your request."
+          },
+          "backupPolicy": {
+            "question": "Does NestQ have a data backup policy?",
+            "answer": "Yes, NestQ maintains regular backups of all customer data."
+          },
+          "retentionPolicies": {
+            "question": "What are your data retention policies?",
+            "answer": "By default, we retain your data for as long as you maintain an active account. Enterprise customers can configure custom retention policies to meet specific regulatory or internal requirements. Data is automatically removed according to these policies unless legal holds require otherwise."
+          }
+        }
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "security": {
+        "title": "Security",
+        "description": "How we secure your data & privacy"
+      },
+      "policies": {
+        "title": "Policies",
+        "description": "Everything you need to know about our terms"
+      },
+      "otherFaqs": {
+        "title": "Other FAQs",
+        "description": "All other questions you may have"
+      }
+    },
+    "testimonial": {
+      "name": "Des Traynor",
+      "handle": "@destraynor",
+      "verified": "Verified account",
+      "content": {
+        "part1": "I don't think I've ever gotten more thanks from people recommending an app than I have for",
+        "part2": "Everyone thinks they have a good meeting notes app, but it's only once they use Granola they realise what they've been missing."
+      },
+      "date": "9:34 PM · Apr 3, 2025",
+      "likes": "351"
+    }
+  },
+  "builtForPeople": {
+    "title": "What people are saying about Granola",
+    "tweets": {
+      "natFriedman": {
+        "content": "Been using granola.so a bit lately; it generates the best meeting notes of anything I've tried so far. Not sure how they did that."
+      },
+      "ryanHoover": {
+        "content": "Granola is so good. I hope they introduce a marketplace of one-click integrations. I got use cases! :)"
+      },
+      "soleio": {
+        "content": "I get uncharacteristically excited about group Zoom meetings now. Why? Because the payoff is seeing @meetgranola really work its magic and generate incredible meeting notes seconds after we adjourn"
+      },
+      "danShipper": {
+        "content": "If you aren't using @meetgranola for your meetings you are seriously missing out. Incredible product."
+      },
+      "guillermoRauch": {
+        "content": "It's actually unbelievable how good granola.ai is. It replaces writing documents. It's the killer user research tool. The ability to \"chat with the transcript\" to come back to a point that was made is pure gold. There's no going back to pre-granola days."
+      },
+      "alexCohen": {
+        "content": "The two AI tools I use most often right now: - Granola.ai - Howie.com. Both are 10/10. Granola has solved meeting notes for me and Howie has saved me dozens of hours of scheduling headaches"
+      },
+      "mds": {
+        "content": "I love Granola (the AI note taking app)"
+      },
+      "stevenTey": {
+        "content": "Replying to @james406. Bullish on @meetgranola — no more \"AI notetaker\" needed"
+      },
+      "desTraynor": {
+        "content": "I don't think I've ever gotten more thanks from people recommending an app than I have for @meetgranola. Everyone thinks they have a good meeting notes app, but it's only once they use Granola they realise what they've been missing."
+      },
+      "nicholeWischoff": {
+        "content": "Just used Granola AI for the first time to take notes for me. Totally insane product. Highly recommend. Not an investor sadly."
+      },
+      "deedy": {
+        "content": "Granola is one of the best made \"AI\" apps that I've used this year. If you are in a lot of meetings, this is a gamechanger. It takes notes in all those meetings for you, so you only need to add what's in your head. It's minimal, fast, with no setup. It. just. works."
+      }
+    }
+  },
+  "security": {
+    "title": "Security, privacy, and how it all works",
+    "description": "Your security and privacy are of utmost importance to us. Find the most important details below, followed by FAQs, and then links to all our terms and policies at the bottom of this page.",
+    "compliance": {
+      "tls": {
+        "title": "TLS 1.2",
+        "description": "We use strong encryption, in transit and at rest, using TLS 1.2, and strong hashing algorithms"
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "NestQ uses AI models to power parts of the application. As per the contract with our cloud providers, we own the input and output of these models, and no information is ever shared or used in training. AI is as safe as any other cloud service such as a database. available upon request",
+        "linkText": "Read our Privacy Policy",
+        "linkUrl": "https://app.nestq.ai/privacy"
+      }
+    },
+    "basics": {
+      "howItWorks": {
+        "title": "How NestQ Works with Your Meetings",
+        "captureOptions": {
+          "title": "NestQ offers flexible options for capturing client conversations:",
+          "webApp": {
+            "title": "Web App:",
+            "description": "Use in your browser for in-person meeting notes, to record unscheduled calls, or connect to your calendar for scheduled virtual meetings."
+          },
+          "phoneApp": {
+            "title": "Phone App:",
+            "description": "Ideal for capturing in-person meeting details on the go."
+          }
+        },
+        "calendarIntegration": {
+          "title": "Calendar Integration:",
+          "description": "NestQ seamlessly integrates with your calendar (e.g., Google, Outlook) to identify and prepare for your scheduled meetings."
+        },
+        "virtualMeetings": {
+          "title": "For virtual meetings, you have choices:",
+          "options": [
+            "Allow NestQ to automatically join as a participant (bot) using trusted third-party services like Recall.ai or Meeting Bass.",
+            "Manually activate recording via the NestQ web app during your meeting."
+          ]
+        },
+        "compatibility": "NestQ is compatible with all major meeting platforms, including Zoom, Google Meet, and Microsoft Teams.",
+        "aiPartners": "We partner with leading AI providers like OpenAI for intelligent summarization and utilize high-quality transcription services to ensure accuracy."
+      },
+      "aiTraining": {
+        "title": "AI Model Training & Your Data Privacy",
+        "dataPrivacy": {
+          "title": "Your Data Stays Yours:",
+          "description": "We strictly prohibit third-party AI providers, such as OpenAI, from using your client data to train their general AI models. Your information is processed solely to provide NestQ's services to you."
+        }
+      },
+      "recordings": {
+        "title": "Audio Recordings & Transcripts",
+        "minimalHandling": {
+          "title": "Minimal Audio Handling:",
+          "description": "NestQ is designed to minimize audio storage. Audio is captured only for transcription."
+        },
+        "botAssisted": "When bot-assisted recording is used (via Recall.ai or Meeting Bass), these services handle initial audio capture and transcription per their strict security protocols. NestQ only receives and stores the final text transcript."
+      },
+      "dataControl": {
+        "title": "You Control Your Data",
+        "privacy": {
+          "title": "Privacy by Default:",
+          "description": "All your notes and transcripts are private by default. You decide if, when, and with whom to share them."
+        },
+        "retention": {
+          "title": "Full Retention & Deletion Control:",
+          "description": "You have complete authority over your data. Delete individual notes or request the deletion of your entire dataset at any time, in line with your firm's data retention policies."
+        }
+      },
+      "infrastructure": {
+        "title": "Secure, Encrypted Infrastructure",
+        "storage": {
+          "title": "Encrypted Storage:",
+          "description": "Your transcripts and notes are stored in our Canada-hosted Azure Virtual Private Cloud, encrypted both at rest and in transit using industry-standard protocols."
+        },
+        "backups": {
+          "title": "Reliable Backups:",
+          "description": "Data is backed up daily to ensure integrity and availability."
+        },
+        "team": {
+          "title": "Expert Engineering Team:",
+          "description": "NestQ is built and maintained by a top-tier engineering team with extensive experience creating secure, scalable infrastructure."
+        }
+      },
+      "help": {
+        "title": "We're Here to Help",
+        "contact": "If you have more security questions, please reach out to our team."
+      }
+    },
+    "faq": {
+      "dataSecurity": {
+        "title": "Data Security",
+        "questions": {
+          "security": {
+            "question": "How does NestQ secure customer data?",
+            "answer": "NestQ employs industry-standard encryption protocols and security measures to protect customer data. All data is encrypted both in transit and at rest using AES-256 encryption. We regularly conduct security audits and follow secure development practices to ensure your data remains protected."
+          },
+          "vulnerabilities": {
+            "question": "How can I report security vulnerabilities to NestQ?",
+            "answer": "You can report security vulnerabilities by emailing support@nestQ.ai. We operate a responsible disclosure program and work with security researchers to quickly address any reported issues."
+          },
+          "privateCloud": {
+            "question": "Can I use a version of NestQ in a private cloud?",
+            "answer": "Yes, NestQ offers a private cloud deployment option for enterprise customers. This allows you to run NestQ in your own cloud environment with dedicated resources and infrastructure."
+          }
+        }
+      },
+      "dataStorage": {
+        "title": "Data Storage & Processing",
+        "questions": {
+          "accountDeletion": {
+            "question": "What happens to my data if I delete my account?",
+            "answer": "When you delete your account, all your personal data is permanently removed from our systems immediately. Any anonymized aggregate statistics derived from your data may be retained but cannot be traced back to you."
+          },
+          "dataExport": {
+            "question": "Can I request a copy of all my data?",
+            "answer": "Yes, you can request a complete export of all your data at any time by contacting our support team. We'll provide your data in a machine-readable format within 72 hours of your request."
+          },
+          "backupPolicy": {
+            "question": "Does NestQ have a data backup policy?",
+            "answer": "Yes, NestQ maintains regular backups of all customer data."
+          },
+          "retentionPolicies": {
+            "question": "What are your data retention policies?",
+            "answer": "By default, we retain your data for as long as you maintain an active account. Enterprise customers can configure custom retention policies to meet specific regulatory or internal requirements. Data is automatically removed according to these policies unless legal holds require otherwise."
+          }
+        }
+      }
+    }
   }
 }

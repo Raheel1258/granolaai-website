@@ -1,43 +1,45 @@
-export const getPlansData = (billingPeriod: string) => [
-  {
-    name: "Free trial",
-    price: "Free",
-    period: "",
-    buttonText: "Get started",
-    buttonVariant: "accent",
-    androidButton: "Join the Windows waitlist",
-    features: [
-      "25 free meetings",
-      "AI chat with any meeting",
-      "Create your own note templates",
-    ],
-  },
-  {
-    name: "Individual",
-    price: billingPeriod === "monthly" ? "$18" : "$180",
-    period: billingPeriod === "monthly" ? "per month" : "per year",
-    buttonText: "Subscribe",
-    buttonVariant: "outline",
-    androidButton: "Sign up in app",
-    features: [
-      { text: "Unlimited meetings for you", highlight: true },
-      "AI chat with any meeting",
-      "Create your own note templates",
-    ],
-  },
-  {
-    name: "Business",
-    price: billingPeriod === "monthly" ? "$14" : "$140",
-    period:
-      billingPeriod === "monthly" ? "per user per month" : "per user per year",
-    buttonText: "Get started",
-    buttonVariant: "outline",
-    androidButton: "Sign up in app",
-    features: [
-      { text: "Unlimited meetings for the whole team", highlight: true },
-      "Share templates across your team",
-      "Consolidated billing & admin",
-      { text: "Everything included in Individual", icon: "plus" },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
+
+interface Feature {
+  text: string;
+  highlight?: boolean;
+  icon?: string;
+}
+
+interface Plan {
+  name: string;
+  price: string;
+  period: string;
+  buttonText: string;
+  androidButton: string;
+  features: (string | Feature)[];
+}
+
+export const getPlansData = (billingPeriod: string, t: any) => {
+  return [
+    {
+      name: t("plans.freeTrial.name"),
+      price: t("plans.freeTrial.price"),
+      period: t("plans.freeTrial.period"),
+      buttonText: t("plans.freeTrial.buttonText"),
+      androidButton: t("plans.freeTrial.androidButton"),
+      features: t.raw("plans.freeTrial.features"),
+    },
+    {
+      name: t("plans.individual.name"),
+      price: t(`plans.individual.price.${billingPeriod}`),
+      period: t(`plans.individual.period.${billingPeriod}`),
+      buttonText: t("plans.individual.buttonText"),
+      androidButton: t("plans.individual.androidButton"),
+      features: t.raw("plans.individual.features"),
+    },
+    {
+      name: t("plans.business.name"),
+      price: t(`plans.business.price.${billingPeriod}`),
+      period: t(`plans.business.period.${billingPeriod}`),
+      buttonText: t("plans.business.buttonText"),
+      androidButton: t("plans.business.androidButton"),
+      features: t.raw("plans.business.features"),
+    },
+  ];
+};

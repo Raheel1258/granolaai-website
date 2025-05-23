@@ -1,13 +1,17 @@
+"use client";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export const Testimonial = () => {
+  const t = useTranslations("pricing.testimonial");
+
   return (
     <div className="mt-4 p-6 border rounded-xl bg-gray-900 text-white shadow-md max-w-xl mx-auto">
       <div className="flex items-center gap-3 pb-3 mb-3">
         <div className="w-12 h-12 rounded-full overflow-hidden">
           <Image
             src="/api/placeholder/48/48"
-            alt="Des Traynor"
+            alt={t("name")}
             width={48}
             height={48}
             className="w-full h-full object-cover"
@@ -15,10 +19,10 @@ export const Testimonial = () => {
         </div>
         <div>
           <div className="flex items-center gap-1">
-            <h3 className="font-semibold">Des Traynor</h3>
+            <h3 className="font-semibold">{t("name")}</h3>
             <svg
               viewBox="0 0 24 24"
-              aria-label="Verified account"
+              aria-label={t("verified")}
               className="w-4 h-4 text-blue-300"
             >
               <g>
@@ -29,19 +33,17 @@ export const Testimonial = () => {
               </g>
             </svg>
           </div>
-          <div className="text-sm text-blue-200">@destraynor</div>
+          <div className="text-sm text-blue-200">{t("handle")}</div>
         </div>
       </div>
       <p className="mb-3">
-        I don&apos;t think I&apos;ve ever gotten more thanks from people
-        recommending an app than I have for{" "}
+        {t("content.part1")}{" "}
         <span className="text-blue-300">@meetgranola</span>.
         <br />
         <br />
-        Everyone thinks they have a good meeting notes app, but it&apos;s only
-        once they use Granola they realise what they&apos;ve been missing.
+        {t("content.part2")}
       </p>
-      <div className="text-sm text-blue-300">9:34 PM · Apr 3, 2025</div>
+      <div className="text-sm text-blue-300">{t("date")}</div>
       <div className="flex gap-3 mt-3 text-blue-300">
         <div className="flex items-center gap-1">
           <svg viewBox="0 0 24 24" className="w-4 h-4">
@@ -52,7 +54,7 @@ export const Testimonial = () => {
               />
             </g>
           </svg>
-          <span>351</span>
+          <span>{t("likes")}</span>
         </div>
       </div>
     </div>
