@@ -1,6 +1,6 @@
 import BuiltForPeople from "@/components/BuiltForPeople";
-import GranolaPricingPage from "../../components/Faq";
-import Pricing from "../../components/Pricing";
+import GranolaPricingPage from "../../../components/Faq";
+import Pricing from "../../../components/Pricing";
 // import TrustedBySection from "@/components/TrustedBySection";
 
 export default function Page() {

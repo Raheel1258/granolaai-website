@@ -1,21 +1,24 @@
+"use client";
 import { footerLinks, otherFooterLinks } from "@/constants/nav-links";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { calendlyLink, signupLink, linkedinLink } from "@/constants/nav-links";
+import { useLocale, useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+
   return (
     <footer className="px-[24px] pt-[32px] pb-[16px] flex flex-col gap-8 bg-[#fafafa]">
       <section className="flex overflow-visible relative flex-col items-center py-16 w-full sm:px-6 md:py-24 lg:py-20 lg:px-8 lg:max-w-6xl gap-8 justify-center px-0 mx-auto max-w-7xl text-xl text-center lg:gap-8">
         <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8">
           <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
-            Get started for free in less than 10 minutes
+            {t("getStarted.title")}
           </h2>
           <p className="text-xl font-medium lg:text-2xl text-gray-500">
-            Get started with a 30 day free trial. You&apos;ll have full access
-            to the NestQ platform, with help from our team, to make sure you get
-            the most out of your experience.
+            {t("getStarted.description")}
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
@@ -39,7 +42,7 @@ const Footer = () => {
               >
                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
               </svg>
-              <span>Book a Demo</span>
+              <span>{t("buttons.bookDemo")}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -72,7 +75,7 @@ const Footer = () => {
               >
                 <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z" />
               </svg>
-              <span>Try for free</span>
+              <span>{t("buttons.tryFree")}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -100,7 +103,7 @@ const Footer = () => {
           className="-ml-2.5 w-11 h-11"
         />
         <div className="flex-1"></div>
-        {footerLinks.map((link, index: number) => {
+        {footerLinks.map((link:any, index: number) => {
           return (
             <Link
               key={index}
@@ -121,8 +124,8 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex flex-col gap-2 items-end mx-auto w-full max-w-7xl md:items-center md:gap-4 md:flex-row text-tertiary">
-        <p>© NestQ inc 2025</p>
-        <p>Made with ♥︎ in Canada</p>
+        <p>{t("copyright")}</p>
+        <p>{t("madeIn")}</p>
         <div className="flex-1"></div>
         {otherFooterLinks.map((link, index: number) => {
           return (
@@ -131,7 +134,7 @@ const Footer = () => {
               href={link.path}
               className="transition-all hover:underline underline-offset-2 hover:underline-offset-4"
             >
-              {link.name}
+              {locale === "en" ? link.name : link.nameFr}
             </Link>
           );
         })}

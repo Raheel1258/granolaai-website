@@ -1,7 +1,7 @@
 import React from "react";
 import MeetingToWork from "./MeetingToWork";
 import NoteTemplateTabs from "./NoteTemplateTabs";
-import ShareNotes from "./ShareNotes";
+// import ShareNotes from "./ShareNotes";
 import { BenefitsSection } from "./BenefitsSection";
 
 const GradientSectionWrapper: React.FC = () => {

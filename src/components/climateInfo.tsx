@@ -1,10 +1,11 @@
+import Image from "next/image";
 import React from "react";
 
 const StripeClimateInfo: React.FC = () => {
   return (
     <div className="flex flex-col col-span-full items-center mt-32 mb-8">
       <div className="flex gap-2 text-black">
-        <img
+        <Image
           src="/StripeClimateBadge.svg"
           width={24}
           height={24}

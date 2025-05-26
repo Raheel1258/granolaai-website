@@ -1,5 +1,6 @@
 import { BlogIcon, PressIcon } from "@/components/ui/icons";
 import { NewsItemType } from "./type";
+import Image from "next/image";
 export const NewsItem = ({ item }: { item: NewsItemType }) => {
   const isFeature =
     item.title ===
@@ -34,7 +35,7 @@ export const NewsItem = ({ item }: { item: NewsItemType }) => {
         <div className="flex items-center space-x-2 text-sm">
           {item.author ? (
             <div className="flex items-center cursor-pointer">
-              <img
+              <Image
                 alt={item.author.name}
                 src={item.author.image}
                 className="rounded-full size-6"

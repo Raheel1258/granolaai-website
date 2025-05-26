@@ -1,62 +1,65 @@
 "use client";
 import React, { useState } from "react";
 import SkeletonListLoader from "./SkeletonListLoader";
+import { useTranslations } from "next-intl";
 
 const NoteTemplateSection = () => {
+  const t = useTranslations("noteTemplates");
+  const [activeTab, setActiveTab] = useState(t("templates.clientMeeting"));
+  const [version, setVersion] = useState(0);
+
   const templatesData: Record<string, { title: string; headings: string[] }> = {
-    "Client Meeting": {
-      title: "Client Meeting",
+    [t("templates.clientMeeting")]: {
+      title: t("templates.clientMeeting"),
       headings: [
-        "Meeting Summary",
-        "Follow-Up Tasks",
-        "Client's Talking Points",
-        "Account Actions",
-        "Summary By Topics"
+        t("headings.meetingSummary"),
+        t("headings.followUpTasks"),
+        t("headings.clientTalkingPoints"),
+        t("headings.accountActions"),
+        t("headings.summaryByTopics")
       ]
     },
-    "General Meeting": {
-      title: "General Meeting",
+    [t("templates.generalMeeting")]: {
+      title: t("templates.generalMeeting"),
       headings: [
-        "General Meeting Summary",
-        "Follow-Up Tasks",
-        "Summary By Topics",
-        "Conversation Timeline"
+        t("headings.generalMeetingSummary"),
+        t("headings.followUpTasks"),
+        t("headings.summaryByTopics"),
+        t("headings.conversationTimeline")
       ]
     },
-    "Plan Review": {
-      title: "Plan Review",
+    [t("templates.planReview")]: {
+      title: t("templates.planReview"),
       headings: [
-        "Meeting Summary",
-        "Follow-Up Tasks",
-        "Client's Talking Points",
-        "Account Actions",
-        "Summary By Topics"
+        t("headings.meetingSummary"),
+        t("headings.followUpTasks"),
+        t("headings.clientTalkingPoints"),
+        t("headings.accountActions"),
+        t("headings.summaryByTopics")
       ]
     },
-    "Onboarding / Discovery": {
-      title: "Onboarding / Discovery",
+    [t("templates.onboarding")]: {
+      title: t("templates.onboarding"),
       headings: [
-        "Meeting Summary",
-        "Follow-Up Tasks",
-        "Client's Talking Points",
-        "Accounts To Be Opened",
-        "Summary By Topics"
+        t("headings.meetingSummary"),
+        t("headings.followUpTasks"),
+        t("headings.clientTalkingPoints"),
+        t("headings.accountsToBeOpened"),
+        t("headings.summaryByTopics")
       ]
     },
-    "Planning Meeting": {
-      title: "Planning Meeting",
+    [t("templates.planningMeeting")]: {
+      title: t("templates.planningMeeting"),
       headings: [
-        "Meeting Summary",
-        "Follow-Up Tasks",
-        "Client's Talking Points",
-        "Financial Facts Captured",
-        "Structured Data Points"
+        t("headings.meetingSummary"),
+        t("headings.followUpTasks"),
+        t("headings.clientTalkingPoints"),
+        t("headings.financialFacts"),
+        t("headings.structuredDataPoints")
       ]
     }
   };
   const templateNames = Object.keys(templatesData);
-  const [activeTab, setActiveTab] = useState(templateNames[0]);
-  const [version, setVersion] = useState(0);
 
   const renderTemplateContent = (templateName: string) => {
     const keyPrefix = templateName.replace(/\s/g, "-").toLowerCase();
@@ -83,9 +86,9 @@ const NoteTemplateSection = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <span>Today 4:00 PM</span>
+            <span>{t("metadata.time")}</span>
           </div>
-          <div className="">Jim, Michaela +5</div>
+          <div className="">{t("metadata.participants")}</div>
         </div>
         <div className="w-full">
           {headings.map((heading, idx) => (
@@ -103,9 +106,9 @@ const NoteTemplateSection = () => {
       return (
         <div className="w-full select-none not-prose h-full">
           <h2 className="text-lg font-semibold sm:text-xl lg:text-2xl">
-            Default Template
+            {t("defaultTemplate.title")}
           </h2>
-          <p>No template selected</p>
+          <p>{t("defaultTemplate.noTemplate")}</p>
         </div>
       );
     }
@@ -116,23 +119,23 @@ const NoteTemplateSection = () => {
       <div>
         <div className="flex-col col-span-full gap-4 hidden md:flex">
           <h2 className="text-3xl lg:text-5xl text-balance font-bold tracking-[-0.015em] leading-[0.95] text-colored">
-            Customizable templates for your most common meeting types
+            {t("title")}
           </h2>
           <p className="col-span-2 max-w-2xl text-2xl font-medium text-balance text-colored-secondary">
-            Get notes in the exact format your team needs.
+            {t("subtitle")}
           </p>
         </div>
         <div className="flex flex-col col-span-full gap-4 mx-auto max-w-2xl text-center lg:gap-8 md:hidden">
           <h2 className="text-3xl lg:text-5xl text-colored font-bold tracking-[-0.015em] leading-[0.95] text-balance">
-            Customizable templates for your most common meeting types
+            {t("title")}
           </h2>
           <p className="text-xl font-medium lg:text-2xl text-colored-secondary">
-            Get notes in the exact format your team needs.
+            {t("subtitle")}
           </p>
         </div>
         <div
           className="flex-wrap flex-none gap-1 justify-center my-8 w-full max-w-md md:max-w-sm md:justify-start hidden md:flex"
-          aria-label="Choose note template"
+          aria-label={t("ariaLabels.chooseTemplate")}
         >
           {templateNames.map((template) => (
             <button
@@ -141,10 +144,10 @@ const NoteTemplateSection = () => {
               aria-selected={activeTab === template ? "true" : "false"}
               onClick={() => {
                 if (template === activeTab) {
-                  setVersion((v) => v + 1); // Force remount
+                  setVersion((v) => v + 1);
                 } else {
                   setActiveTab(template);
-                  setVersion((v) => v + 1); // Also update for visual effect
+                  setVersion((v) => v + 1);
                 }
               }}
               className={`font-medium px-3 h-12 flex-none text-lg md:text-xl flex items-center justify-center leading-none select-none rounded-full hover:bg-neutral-200 border border-tertiary ${
@@ -170,7 +173,7 @@ const NoteTemplateSection = () => {
         </div>
         <div
           className="flex flex-wrap justify-center gap-2 mt-6 md:hidden"
-          aria-label="Choose note template (mobile)"
+          aria-label={t("ariaLabels.chooseTemplateMobile")}
         >
           {templateNames.map((template) => (
             <button

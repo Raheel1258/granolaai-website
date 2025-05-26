@@ -1,4 +1,4 @@
-import { FAQItem } from "@/app/pricing/types";
+import { FAQItem } from "@/app/[locale]/pricing/types";
 
 export const FAQAccordionItem = ({
   faq,
