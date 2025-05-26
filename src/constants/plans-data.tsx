@@ -1,21 +1,20 @@
-import { useTranslations } from "next-intl";
 
-interface Feature {
-  text: string;
-  highlight?: boolean;
-  icon?: string;
-}
+// interface Feature {
+//   text: string;
+//   highlight?: boolean;
+//   icon?: string;
+// }
 
-interface Plan {
-  name: string;
-  price: string;
-  period: string;
-  buttonText: string;
-  androidButton: string;
-  features: (string | Feature)[];
-}
+// interface Plan {
+//   name: string;
+//   price: string;
+//   period: string;
+//   buttonText: string;
+//   androidButton: string;
+//   features: (string | Feature)[];
+// }
 
-export const getPlansData = (billingPeriod: string, t: any) => {
+export const getPlansData = (billingPeriod: string, t) => {
   return [
     {
       name: t("plans.freeTrial.name"),

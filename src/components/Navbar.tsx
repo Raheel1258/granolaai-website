@@ -52,7 +52,7 @@ const Navbar = () => {
         </Link>
         <nav className="sm:flex hidden">
           <ul className="flex items-center w-full">
-            {navbarLinks.map((link: any, index: number) => (
+            {navbarLinks.map((link, index: number) => (
               <Link
                 key={index}
                 href={`/${locale}/${link.path}`}
@@ -119,7 +119,7 @@ const Navbar = () => {
           </div>
           <div className="text-right flex flex-col gap-8 p-4">
             <div className="flex flex-wrap text-right gap-x-4 justify-end">
-              {footerLinks.map((link: any, index: number) => (
+              {footerLinks.map((link, index: number) => (
                 <Link key={index} href={link.path} className="hover:underline">
                   {locale === "fr" ? link.nameFr : link.name}
                 </Link>

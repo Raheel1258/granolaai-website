@@ -103,7 +103,7 @@ const Footer = () => {
           className="-ml-2.5 w-11 h-11"
         />
         <div className="flex-1"></div>
-        {footerLinks.map((link:any, index: number) => {
+        {footerLinks.map((link, index: number) => {
           return (
             <Link
               key={index}

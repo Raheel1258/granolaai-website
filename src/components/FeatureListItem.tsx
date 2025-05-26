@@ -1,6 +1,4 @@
 import { useTranslations } from "next-intl";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React from "react";
 
 interface FeatureListItemProps {
