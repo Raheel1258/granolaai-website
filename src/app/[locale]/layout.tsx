@@ -42,7 +42,8 @@ async function RootLayoutAsync({
 }) {
 
   const locale = params.locale;
-
+  
+   // eslint-disable-next-line
   if (!locales.includes(locale as any)) {
     notFound();
   }
